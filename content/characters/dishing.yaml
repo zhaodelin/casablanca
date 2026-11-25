@@ -1,0 +1,18 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 谛听
+en: DISHING
+role: 老君侍从
+faction: 蓝溪镇
+color: '#5f6b4f'
+kw:
+  - 谛听
+desc: 老君身边那位沉默的随从，通兽语、能听人心。第九集正式登场，此后常与老君一同出现——下棋、看片子、被差遣去买东西，是蓝溪镇日常里最稳的那一块。
+tags:
+  - 蓝溪镇
+  - 侍从
+cv: —（官微未公布）
+debut: 2013-12-30 · 第九集
+quote: 谛听！来下棋吧！

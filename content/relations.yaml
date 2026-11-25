@@ -1,0 +1,69 @@
+# 人物关系网。from / to 必须是 content/characters/ 里存在的 key；label 会画在连线上。
+
+relations:
+  - from: xiaohei
+    to: infin
+    label: 师徒
+  - from: infin
+    to: luye
+    label: 师徒
+  - from: xiaohei
+    to: luye
+    label: 师姐弟
+  - from: xiaohei
+    to: xiaobai
+    label: 主人
+  - from: xiaobai
+    to: shanxin
+    label: 同学 / 朋友
+  - from: xiaobai
+    to: agen
+    label: 同镇伙伴
+  - from: xiaohei
+    to: bidiu
+    label: 伙伴
+  - from: xiaohei
+    to: heixiu
+    label: 形影
+  - from: xiaohei
+    to: nezha
+    label: 朋友
+  - from: xiaohei
+    to: fengxi
+    label: 对手
+  - from: fengxi
+    to: luozhu
+    label: 同伴
+  - from: fengxi
+    to: xuhuai
+    label: 同伴
+  - from: fengxi
+    to: tianhu
+    label: 同伴
+  - from: laojun
+    to: qingning
+    label: 旧识 · 牵挂
+  - from: laojun
+    to: dishing
+    label: 主从
+  - from: laojun
+    to: infin
+    label: 会馆同僚
+  - from: lingyao
+    to: chinan
+    label: 长老同僚
+  - from: lingyao
+    to: infin
+    label: 立场对立
+  - from: lingyao
+    to: luye
+    label: 追查 / 对立
+  - from: infin
+    to: nezha
+    label: 会馆同僚
+  - from: xiaohei
+    to: dongdong
+    label: TV 新篇
+  - from: mtjj
+    to: xiaohei
+    label: 创造者

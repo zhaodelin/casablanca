@@ -1,0 +1,18 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 虚淮
+en: XUHUA I
+role: 风息同伴
+faction: 风息一派
+color: '#4f6b8f'
+kw:
+  - 虚淮
+desc: 风息一派中的战斗者，性情冷硬。电影里他与无限有过正面交手，是「风息」这条线上最锋利的一把刀。
+tags:
+  - 战斗
+  - 电影1
+cv: 夏侯落枫
+debut: 2019-09-07 · 大电影
+quote: 设计手稿

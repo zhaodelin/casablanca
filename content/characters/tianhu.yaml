@@ -1,0 +1,18 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 天虎
+en: TIANHU
+role: 风息同伴 · 东北虎
+faction: 风息一派
+color: '#8f6b3f'
+kw:
+  - 天虎
+desc: 一只东北虎妖精，风息最信任的伙伴之一。身形庞大、心思简单，在结局里与风息一同留在了岛上。
+tags:
+  - 兽系
+  - 电影1
+cv: —
+debut: 2019-09-07 · 大电影
+quote: 设计手稿

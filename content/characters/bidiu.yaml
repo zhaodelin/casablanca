@@ -1,0 +1,18 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 比丢
+en: BIDIU
+role: 灵兽 · 团子
+faction: 小黑的伙伴
+color: '#d9a13f'
+kw:
+  - 比丢
+desc: 第五集登场的圆滚滚小灵兽，跟着小黑和小白混吃混喝，是《罗小黑战记》里最有存在感的「吉祥物」。
+tags:
+  - 灵兽
+  - TV
+cv: —
+debut: 2012-12-21 · 第五集
+quote: 比丢君登场

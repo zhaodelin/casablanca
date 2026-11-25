@@ -1,0 +1,19 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 风息
+en: FENGXI
+role: 《战记1》反派 · 木系
+faction: 风息一派
+color: '#3f6b3a'
+kw:
+  - 风息
+desc: 妖精中的激进者。家园被人类夺走之后，他不再相信「共存」两个字；夺取小黑的领域，是他为同类准备的最后一搏。失败以后，他化作一棵树，留在那座岛上。
+tags:
+  - 木系
+  - 电影1
+  - 反派
+cv: 郝祥海
+debut: 2019-09-07 · 大电影
+quote: 如果风息没那么执着，他就会这样玩着新款手机吧～

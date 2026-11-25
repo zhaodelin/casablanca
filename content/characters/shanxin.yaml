@@ -1,0 +1,19 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 山新
+en: SHANXIN
+role: 小白的朋友 / 配音演员
+faction: 人类
+color: '#c48fa8'
+kw:
+  - 山新
+desc: 小白身边的女孩，也是小黑的中文配音——同一个名字，两条线在《罗小黑战记》里并行了十五年。
+tags:
+  - 人类
+  - TV
+  - 声优
+cv: 山新（本尊）
+debut: 2011 · TV
+quote: 想和小白山新一起玩游戏么？

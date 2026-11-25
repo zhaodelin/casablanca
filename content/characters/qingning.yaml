@@ -1,0 +1,18 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 清凝
+en: QINGNING
+role: 人类少女
+faction: 蓝溪镇
+color: '#c98fa0'
+kw:
+  - 清凝
+desc: 蓝溪镇的女主角。战乱里被老君捡回去的小女孩，会为一颗糖、一本书高兴很久；她的成长，是老君漫长岁月里最柔软的一段注脚。
+tags:
+  - 蓝溪镇
+  - 君清篇
+cv: —
+debut: 2018-09-27 · 蓝溪镇第一话
+quote: 清凝上天啦～

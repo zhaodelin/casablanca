@@ -1,0 +1,20 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 无限
+en: WUXIAN
+role: 剑圣 · 执行者
+faction: 妖灵会馆
+color: '#4a5b7a'
+kw:
+  - 无限
+  - 师父
+desc: 会馆最出名的执行者，一柄剑、一身长衫，话少而慢。奉命押送小黑去会馆的路上，他带着这只猫看了海、看了云、看了人类的城市；后来他成了小黑的师父，把「强大」和「温柔」一起教给了他。
+tags:
+  - 剑术
+  - 执行者
+  - 师父
+cv: 刘明月 / 宫野真守
+debut: 2019-09-07 · 大电影
+quote: 小黑：师父是这个世界上最好的人～

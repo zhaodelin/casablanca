@@ -1,0 +1,4 @@
+# 生成 assets/data.js 只需要 PyYAML；
+# tools/build_media.py 额外需要 Pillow（重建图片时才会用到）。
+PyYAML>=6.0,<7
+Pillow>=10,<12

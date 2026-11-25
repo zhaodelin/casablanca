@@ -1,0 +1,31 @@
+# 首页「四条作品线」卡片。href 指向页内锚点。
+
+works:
+  - key: tv
+    tag: TV
+    title: 罗小黑战记
+    sub: 2011 → 至今 · 45 集
+    text: 一个人做的 Flash 短片，长成了更新十五年的系列动画。小黑、小白、阿根、比丢，日常就是最大的冒险。
+    img: assets/img/tv-ep1.jpg
+    href: '#tv'
+  - key: film1
+    tag: 电影 01
+    title: 罗小黑战记
+    sub: 2019-09-07 · 3 亿+
+    text: 小黑遇见无限的那一年。一场海上旅途，把「人」与「妖」的旧账摊开。
+    img: assets/img/f1-hero.jpg
+    href: '#film1'
+  - key: film2
+    tag: 电影 02
+    title: 罗小黑战记 2
+    sub: 2025-07-18 · 5 亿+
+    text: 小镇生活被分会馆的遇袭打断，师徒面临分离；师姐鹿野与长老灵遥登场。
+    img: assets/img/f2-poster-b.jpg
+    href: '#film2'
+  - key: comic
+    tag: 漫画
+    title: 蓝溪镇 · 君清篇
+    sub: 2018-09-27 → 2026-02-28 · 139 话
+    text: 老君的前史：他在战乱里捡到一个人类女孩，然后用了很久很久，学怎么放手。
+    img: assets/img/comic-first.jpg
+    href: '#comic'

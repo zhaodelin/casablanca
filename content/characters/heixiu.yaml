@@ -1,0 +1,19 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 嘿咻
+en: HEIXIU
+role: 小黑的小精灵
+faction: 小黑的伙伴
+color: '#3a4a5c'
+kw:
+  - 嘿咻
+  - 黑咻
+desc: 跟着小黑的那只小黑团子，会「嘿咻」一声钻进灵质空间。它和小黑一起长大，也是小黑心情的晴雨表。
+tags:
+  - 精灵
+  - TV
+cv: —
+debut: 2013-07-02 · 《罗小白战记》
+quote: 嘿咻

@@ -1,0 +1,87 @@
+# 番外故事。img 为空时页面会渲染成文字卡（类型 + 年份）。
+
+extras:
+  - date: '2011-07-10'
+    kind: 动画
+    title: 番外 1《罗小白的期末考试》
+    text: 小白的期末考试大作战。系列第一部番外特别篇，第三集开始就是暑假了。
+    img: ''
+    link: https://weibo.com/2019071187/zot7E7uxa
+  - date: '2013-09-12'
+    kind: 动画
+    title: 第八集番外
+    text: 「一定要先看完第八集才能看哟」——官方亲自立的规矩。
+    img: ''
+    link: ''
+  - date: '2014-05-27'
+    kind: MV
+    title: 番外 MV《晚安喵》
+    text: 词曲薄荷映像，演唱艾索。2019 年电影宣传曲又由山新重唱了一版。
+    img: assets/img/extra-wananmiao.jpg
+    link: ''
+  - date: '2017-10-11'
+    kind: 动画
+    title: 番外《初遇》
+    text: 小黑与无限的初遇。两年后，电影把这段初遇重新讲了一遍。
+    img: assets/img/extra-chuyu.jpg
+    link: https://weibo.com/2019071187/FpRWaAKZR
+  - date: '2018-09-27'
+    kind: 漫画
+    title: 《蓝溪镇》（君清篇）
+    text: 老君的番外故事开更，半月更、后改月更，截至 2026 年 2 月共 139 话。
+    img: assets/img/comic-first.jpg
+    link: https://weibo.com/2019071187/GBcdUgBVa
+  - date: '2019-10-17'
+    kind: 漫画
+    title: 番外漫画《剑圣无限》
+    text: 以无限为主角的番外漫画，电影下映后开始更新。
+    img: ''
+    link: ''
+  - date: '2020-03-20'
+    kind: 漫画
+    title: 番外篇《没头没尾》
+    text: 「请欣赏番外篇」——官方原话。
+    img: ''
+    link: ''
+  - date: '2020-11-21'
+    kind: MV
+    title: 番外 MV《宝贝别哭》
+    text: 「有我在」。
+    img: ''
+    link: ''
+  - date: '2022-07-28'
+    kind: 漫画
+    title: 电影番外漫画①《大爽》
+    text: 10.1 万赞。五篇电影番外漫画的第一篇。
+    img: assets/img/extra-dashuang.jpg
+    link: https://weibo.com/2019071187/LElb06LBh
+  - date: '2022-08-28'
+    kind: 漫画
+    title: 电影番外漫画②《馆长》
+    text: 以会馆馆长为视角的一篇。
+    img: ''
+    link: ''
+  - date: '2022-09-30'
+    kind: 漫画
+    title: 电影番外漫画③《聚灵》
+    text: 会馆体系与「聚灵」的设定补完。
+    img: ''
+    link: ''
+  - date: '2022-11-05'
+    kind: 漫画
+    title: 电影番外漫画④《洛竹》
+    text: 8.9 万赞。风息身边那个温和的人，有了自己的前史。
+    img: ''
+    link: ''
+  - date: '2023-04-08'
+    kind: 漫画
+    title: 电影番外漫画⑤《驾照》
+    text: 5.8 万赞。五篇番外漫画收尾。
+    img: assets/img/extra-jiazhao.jpg
+    link: https://weibo.com/2019071187/MB0gNolDi
+  - date: '2026-11-09'
+    kind: 漫画
+    title: 番外篇《花店》
+    text: 6.5 万赞。前篇是《洛竹》，时间线接在电影之后。
+    img: assets/img/extra-huadian.jpg
+    link: https://weibo.com/2019071187/RqygaqqhO

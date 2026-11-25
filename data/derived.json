@@ -1,0 +1,47 @@
+{
+ "_note": "由 tools/sync_archive.py 从两个微博归档重建；没有归档时可手工维护，键名不要改。",
+ "posts": {
+  "film2": 4974,
+  "cat": 1653,
+  "total": 6627
+ },
+ "images": {
+  "film2": 2334,
+  "cat": 3275,
+  "total": 5609
+ },
+ "range": {
+  "film2": [
+   "2018-06-29",
+   "2026-11-24"
+  ],
+  "cat": [
+   "2011-04-07",
+   "2026-11-24"
+  ]
+ },
+ "episodes": 45,
+ "chapters": 139,
+ "mentions": {
+  "agen": 7,
+  "bidiu": 63,
+  "chinan": 7,
+  "dishing": 11,
+  "dongdong": 4,
+  "fengxi": 45,
+  "heixiu": 34,
+  "infin": 286,
+  "laojun": 22,
+  "lingyao": 6,
+  "luozhu": 19,
+  "luye": 92,
+  "mtjj": 87,
+  "nezha": 38,
+  "qingning": 10,
+  "shanxin": 22,
+  "tianhu": 12,
+  "xiaobai": 18,
+  "xiaohei": 1445,
+  "xuhuai": 18
+ }
+}

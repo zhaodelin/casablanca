@@ -1,0 +1,23 @@
+# 角色展示顺序（人物设定集的卡片顺序）。新增角色时在这里加一行。
+# 每个 key 对应 content/characters/<key>.yaml。
+order:
+  - xiaohei
+  - infin
+  - luye
+  - nezha
+  - lingyao
+  - chinan
+  - laojun
+  - qingning
+  - dishing
+  - fengxi
+  - luozhu
+  - xuhuai
+  - tianhu
+  - bidiu
+  - agen
+  - xiaobai
+  - heixiu
+  - shanxin
+  - dongdong
+  - mtjj

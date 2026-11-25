@@ -1,0 +1,38 @@
+# 「这就是 X」官方设定稿卡片。img 指向 assets/img/ 下的缩略图。
+
+designs:
+  - img: design-infin
+    title: 这就是无限。
+    date: '2025-07-27'
+    text: 九套服装，从长衫到短打，同一个人三百年的穿衣史。
+    link: https://weibo.com/3175924975/PD0jr12yV
+  - img: design-luye
+    title: 这就是鹿野。
+    date: '2025-07-26'
+    text: 师姐的工装、鞋型、拉链与缝线的分布，都在这一张里。
+    link: https://weibo.com/3175924975/PCR7c8Zhh
+  - img: design-nezha
+    title: 这就是哪吒。
+    date: '2025-07-28'
+    text: 双丸子头、涂鸦夹克、混天绫——潮得不像会馆的人。
+    link: https://weibo.com/3175924975/PDaUZqA1P
+  - img: design-lingyao
+    title: 这就是灵遥小队。
+    date: '2025-08-03'
+    text: 银发、橙工装，队里每个人的口袋都装着自己的用处。
+    link: https://weibo.com/3175924975/PE4iUmgUL
+  - img: design-executor
+    title: 这就是一级执行者。
+    date: '2025-08-03'
+    text: 会馆体系里最高一级的执行者群像。
+    link: https://weibo.com/3175924975/PE4v5lcOg
+  - img: design-zhanglao
+    title: 这就是长老们。
+    date: '2025-07-29'
+    text: 池年与同僚：会馆里最慢、也最重的那部分。
+    link: https://weibo.com/3175924975/PDjaqp6io
+  - img: design-house
+    title: 这就是无限的小屋。
+    date: '2025-08-09'
+    text: 师徒二人住的地方，院子里有一棵树和一条河。
+    link: https://weibo.com/3175924975/PEYRTauOx

@@ -1,0 +1,19 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: MTJJ 木头
+en: MTJJ
+role: 原作 · 导演
+faction: 寒木春华
+color: '#2f3a4a'
+kw:
+  - MTJJ
+  - 木头
+desc: MTJJ 木头，《罗小黑战记》的原作与导演。从 2011 年一个人做的 Flash 短片，到 2025 年五亿票房的电影，他在微博上用「官博君」的身份记下了全过程。
+tags:
+  - 作者
+  - 导演
+cv: —
+debut: '2011'
+quote: '@MTJJ木头'

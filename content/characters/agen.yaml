@@ -1,0 +1,18 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 阿根
+en: AGEN
+role: 小镇少年
+faction: TV 日常
+color: '#6b7f9c'
+kw:
+  - 阿根
+desc: 第六集登场的少年，与小黑、小白一同在小镇上打转。TV 版把「日常」这件事讲得最好的段落，几乎都有他。
+tags:
+  - TV
+  - 日常
+cv: —
+debut: 2013-03-21 · 第六集
+quote: 《罗小黑战记》第六集 阿根

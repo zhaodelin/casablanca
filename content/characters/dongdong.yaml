@@ -1,0 +1,18 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 冬冬
+en: DONGDONG
+role: TV 第 44 集
+faction: TV 日常
+color: '#8f7f5f'
+kw:
+  - 冬冬
+desc: 第四十四集《冬冬拯救行动方案五》的主角。TV 版更新到 2026 年仍在继续，冬冬是这条长线里新长出来的一颗钉子。
+tags:
+  - TV
+  - 新篇
+cv: —
+debut: 2026-11-17 · 第四十四集
+quote: 冬冬拯救行动方案五

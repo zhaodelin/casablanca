@@ -1,0 +1,19 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 老君
+en: LAOJUN
+role: 会馆创立者 · 蓝溪镇主人
+faction: 妖灵会馆
+color: '#3c7a6a'
+kw:
+  - 老君
+desc: 妖精世界里最古老的存在之一，妖灵会馆的创建者。他在蓝溪镇守着一间屋子、一册册书和一段没能说完的往事；《蓝溪镇》讲的就是他与人类少女清凝相遇的那段前史。
+tags:
+  - 蓝溪镇
+  - 会馆
+  - 君清篇
+cv: —（官微未公布）
+debut: 2014-04-28 · 第十集
+quote: 老君的庇佑

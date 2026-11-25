@@ -1,0 +1,18 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 小白
+en: XIAOBAI
+role: 小黑的主人
+faction: 人类
+color: '#d98f9c'
+kw:
+  - 小白
+desc: 捡到小黑的人类少女，也是整部作品里第一个把小黑当作家人的人。她的期末考试、她的暑假、她的爸爸——都是《罗小黑战记》最早的那批笑点。
+tags:
+  - 人类
+  - TV
+cv: —
+debut: 2011-04-08 · 第一集
+quote: 这是我的主人小白～可爱么喵

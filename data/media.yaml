@@ -1,0 +1,356 @@
+_note: '图片配方：每张成品图记录源图（archive = film2/cat，source = images/ 下的相对路径）、裁剪与缩放参数。
+
+  归档不在仓库里；改配方后跑 `make media`（需要本地有 luoxiaohei2 / luoxiaoheicat 目录）。'
+images:
+  - out: assets/img/f2-hero.jpg
+    archive: film2
+    source: images/2025-06/PwlxujmBP_01.jpg
+    max: 1600
+  - out: assets/img/f2-poster-b.jpg
+    archive: film2
+    source: images/2025-07/PDCdBnIhd_01.jpg
+    max: 1400
+  - out: assets/img/f2-poster-c.jpg
+    archive: film2
+    source: images/2025-09/Q4EdWdHmh_01.jpg
+    max: 1400
+  - out: assets/img/f2-final.jpg
+    archive: film2
+    source: images/2025-10/Q9zPmFAq2_01.jpg
+    max: 1400
+  - out: assets/img/f2-wide.jpg
+    archive: film2
+    source: images/2025-08/PDUWtgSyR_01.jpg
+    max: 2000
+    rotate: -90
+  - out: assets/img/f2-2yi.jpg
+    archive: film2
+    source: images/2025-07/PCS6sy3na_01.jpg
+    max: 1400
+  - out: assets/img/f2-5yi.jpg
+    archive: film2
+    source: images/2025-09/Q2ZDVqfns_01.jpg
+    max: 1400
+  - out: assets/img/f1-hero.jpg
+    archive: cat
+    source: images/2019-07/HEUvJy3ev_01.jpg
+    max: 1600
+  - out: assets/img/f1-mood.jpg
+    archive: cat
+    source: images/2019-09/I5bL8cqJp_01.jpg
+    max: 1400
+  - out: assets/img/f1-release.jpg
+    archive: cat
+    source: images/2019-09/I5JKzuPOF_01.jpg
+    max: 1400
+  - out: assets/img/f1-world.jpg
+    archive: cat
+    source: images/2019-08/I3msZr3QV_01.jpg
+    max: 2000
+  - out: assets/img/f1-teaser.jpg
+    archive: cat
+    source: images/2018-07/Gsnt8nm8a_01.jpg
+    max: 1400
+  - out: assets/img/f1-3yi.jpg
+    archive: cat
+    source: images/2019-09/I91hAda4z_01.jpg
+    max: 1400
+  - out: assets/img/tv-ep1.jpg
+    archive: cat
+    source: images/2011-04/eekMpG_01.jpg
+    max: 1200
+  - out: assets/img/tv-pv2021.jpg
+    archive: cat
+    source: images/2021-03/K72tTszC4_01.jpg
+    max: 1200
+  - out: assets/img/tv-ep44.jpg
+    archive: cat
+    source: images/2026-11/RseKBnGCy_01.jpg
+    max: 1600
+  - out: assets/img/extra-chuyu.jpg
+    archive: cat
+    source: images/2017-10/FpRWaAKZR_01.jpg
+    crop:
+      - 0.0
+      - 0.4961
+      - 1.0
+      - 0.068173
+    width: 1200
+  - out: assets/img/extra-huadian.jpg
+    archive: cat
+    source: images/2026-11/RqygaqqhO_10.jpg
+    crop:
+      - 0.0
+      - 0.0643
+      - 1.0
+      - 0.445788
+    width: 1200
+  - out: assets/img/extra-dashuang.jpg
+    archive: cat
+    source: images/2022-07/LElb06LBh_01.jpg
+    crop:
+      - 0.0
+      - 0.5298
+      - 1.0
+      - 0.446429
+    width: 1200
+  - out: assets/img/extra-jiazhao.jpg
+    archive: cat
+    source: images/2023-04/MB0gNolDi_01.jpg
+    crop:
+      - 0.0
+      - 0.5298
+      - 1.0
+      - 0.446429
+    width: 1200
+  - out: assets/img/extra-wananmiao.jpg
+    archive: cat
+    source: images/2014-05/B63m3uNFd_01.jpg
+    max: 900
+  - out: assets/img/comic-first.jpg
+    archive: cat
+    source: images/2018-09/GBcdUgBVa_01.jpg
+    crop:
+      - 0.0
+      - 0.32
+      - 1.0
+      - 0.04425
+    width: 1000
+  - out: assets/img/book.jpg
+    archive: film2
+    source: images/2024-04/Oa0VS3Ugm_01.jpg
+    max: 1200
+  - out: assets/img/design-infin.jpg
+    archive: film2
+    source: images/2025-07/PD0jr12yV_01.jpg
+    max: 1100
+    crop:
+      - 0.15
+      - 0.062
+      - 0.7
+      - 0.16
+  - out: assets/img/design-luye.jpg
+    archive: film2
+    source: images/2025-07/PCR7c8Zhh_01.jpg
+    max: 1100
+    crop:
+      - 0.02
+      - 0.062
+      - 0.96
+      - 0.16
+  - out: assets/img/design-nezha.jpg
+    archive: film2
+    source: images/2025-07/PDaUZqA1P_01.jpg
+    max: 1100
+    crop:
+      - 0.05
+      - 0.05
+      - 0.9
+      - 0.16
+  - out: assets/img/design-lingyao.jpg
+    archive: film2
+    source: images/2025-08/PE4iUmgUL_01.jpg
+    max: 1100
+    crop:
+      - 0.01
+      - 0.028
+      - 0.62
+      - 0.075
+  - out: assets/img/design-zhanglao.jpg
+    archive: film2
+    source: images/2025-07/PDjaqp6io_01.jpg
+    max: 1100
+    crop:
+      - 0.02
+      - 0.045
+      - 0.96
+      - 0.085
+  - out: assets/img/design-executor.jpg
+    archive: film2
+    source: images/2025-08/PE4v5lcOg_01.jpg
+    max: 1100
+    crop:
+      - 0.02
+      - 0.05
+      - 0.96
+      - 0.085
+  - out: assets/img/design-house.jpg
+    archive: film2
+    source: images/2025-08/PEYRTauOx_01.jpg
+    max: 1100
+    crop:
+      - 0.0
+      - 0.1
+      - 1.0
+      - 0.1
+avatars:
+  - out: assets/avatars/xiaohei.jpg
+    archive: cat
+    source: images/2011-04/eekMpG_01.jpg
+    box:
+      - 0.17
+      - 0.335
+      - 0.33
+      - 0.34
+    note: 第一集海报上的小黑侧脸。
+  - out: assets/avatars/infin.jpg
+    archive: film2
+    source: images/2025-07/PD0jr12yV_02.jpg
+    box:
+      - 0.395
+      - 0.1408
+      - 0.1325
+      - 0.0483
+    note: 《罗小黑战记2》2025-07 无限九套服装设计稿，第 1 行正面头部。
+  - out: assets/avatars/luye.jpg
+    archive: cat
+    source: images/2025-11/QbMwNrxYp_01.jpg
+    box:
+      - 0.26
+      - 0.43
+      - 0.26
+      - 0.26
+    note: 「师姐师姐！」原图里的鹿野侧脸。
+  - out: assets/avatars/nezha.jpg
+    archive: film2
+    source: images/2025-07/PDaUZqA1P_01.jpg
+    box:
+      - 0.17
+      - 0.0836
+      - 0.25
+      - 0.0715
+    note: 《罗小黑战记2》2025-07 哪吒设计稿，第一行正面头部。
+  - out: assets/avatars/lingyao.jpg
+    archive: film2
+    source: images/2025-08/PE4iUmgUL_01.jpg
+    box:
+      - 0.545
+      - 0.2307
+      - 0.15
+      - 0.031
+    note: 《罗小黑战记2》2025-08 灵遥小队设计稿，银发橙工装头部特写。
+  - out: assets/avatars/chinan.jpg
+    archive: film2
+    source: images/2025-07/PDjaqp6io_01.jpg
+    box:
+      - 0.4575
+      - 0.2536
+      - 0.27
+      - 0.0543
+    note: 《罗小黑战记2》2025-07 长老们设计稿，池年头像特写（红发白袍）。
+  - out: assets/avatars/fengxi.jpg
+    archive: film2
+    source: images/2019-09/I6u93nzAA_01.jpg
+    box:
+      - 0.645
+      - 0.6
+      - 0.125
+      - 0.2222
+    note: 《罗小黑战记》2019-09 风息设计手稿，右下角色脸特写（已避开手写批注）。
+  - out: assets/avatars/luozhu.jpg
+    archive: film2
+    source: images/2019-09/I6spXC1PK_01.jpg
+    box:
+      - 0.6725
+      - 0.1333
+      - 0.125
+      - 0.2222
+    note: 《罗小黑战记》2019-09 洛竹设计手稿，右上正面脸特写。
+  - out: assets/avatars/xuhuai.jpg
+    archive: film2
+    source: images/2019-09/I6siSfaxV_01.jpg
+    box:
+      - 0.344
+      - 0.5733
+      - 0.145
+      - 0.2578
+    note: 《罗小黑战记》2019-09 虚淮设计手稿，蓝角兽人正面脸特写。
+  - out: assets/avatars/tianhu.jpg
+    archive: film2
+    source: images/2019-09/I6sU1iHc6_01.jpg
+    box:
+      - 0.7475
+      - 0.5911
+      - 0.15
+      - 0.2667
+    note: 《罗小黑战记》2019-09 天虎设计手稿，右下「没帽子」黄虎脸。
+  - out: assets/avatars/laojun.jpg
+    archive: cat
+    source: images/2021-02/K0b4uhhkV_01.jpg
+    box:
+      - 0.513
+      - 0.0049
+      - 0.3333
+      - 0.1603
+    note: 2021-02「立春」节气贺图（蓝溪镇全员），老君头部。
+  - out: assets/avatars/dishing.jpg
+    archive: cat
+    source: images/2015-06/ClWdl8d06_01.jpg
+    box:
+      - 0.5125
+      - 0.038
+      - 0.475
+      - 0.076
+    note: 2015-06 蓝溪镇四格漫画《老君与谛听的日常》顶部格，谛听侧脸（源图仅 400px 宽）。
+  - out: assets/avatars/qingning.jpg
+    archive: cat
+    source: images/2021-02/K0b4uhhkV_01.jpg
+    box:
+      - 0.1481
+      - 0.2471
+      - 0.25
+      - 0.1202
+    note: 2021-02「立春」节气贺图（蓝溪镇全员），清凝头部。
+  - out: assets/avatars/bidiu.jpg
+    archive: cat
+    source: images/2015-09/CyuwQqkLJ_01.jpg
+    box:
+      - 0.0
+      - 0.0
+      - 1.0
+      - 1.0
+    note: 2015-09「@比丢BIU 头像三只」600×600 官方头像，第一张（抱铅笔）。
+  - out: assets/avatars/agen.jpg
+    archive: cat
+    source: images/2026-11/RseKBnGCy_01.jpg
+    box:
+      - 0.5833
+      - 0.1343
+      - 0.4167
+      - 0.7407
+    note: 2026-11 第 44 集《冬冬拯救行动方案五》官方横幅，蓝发精灵耳少年（判为阿根）。
+  - out: assets/avatars/xiaobai.jpg
+    archive: cat
+    source: images/2026-11/Rq6LJj4E5_01.jpg
+    box:
+      - 0.5062
+      - 0.5852
+      - 0.1172
+      - 0.2083
+    note: 2026-11 第 42 集《龙游的风在轻轻地吹》官方横幅，橙发少女（判为小白）。
+  - out: assets/avatars/heixiu.jpg
+    archive: cat
+    source: images/2015-03/C9jElsFU8_01.gif
+    box:
+      - 0.568
+      - 0.37
+      - 0.352
+      - 0.44
+    note: 2015-03 GIF 首帧（小黑与嘿咻），灰白大眼猫（判为嘿咻），源图仅 250×200。
+  - out: assets/avatars/dongdong.jpg
+    archive: cat
+    source: images/2026-11/Rq6LJj4E5_01.jpg
+    box:
+      - 0.6979
+      - 0.1204
+      - 0.1354
+      - 0.2407
+    note: 2026-11 第 42 集《龙游的风在轻轻地吹》官方横幅，粉发少女（判为冬冬）。
+  - out: assets/avatars/shanxin.jpg
+    generator: monogram
+    char: 山
+    note: 山新没有单人头像，用深蓝底 + 宋体字占位。
+  - out: assets/avatars/mtjj.jpg
+    generator: monogram
+    char: 木
+    note: 木头没有单人头像，用深蓝底 + 宋体字占位。

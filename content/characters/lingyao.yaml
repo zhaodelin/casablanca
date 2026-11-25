@@ -1,0 +1,19 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 灵遥
+en: LINGYAO
+role: 长老 · 对立面
+faction: 妖灵会馆
+color: '#7a6a9c'
+kw:
+  - 灵遥
+desc: 《战记2》的核心对手。银发、橙色工装，行事果断到近乎冷酷；在他看来，妖灵会馆的秩序需要用更强硬的方式维系，而无限与小黑的师徒之情，正是这套秩序里最不稳定的变量。
+tags:
+  - 新角色
+  - 长老
+  - 对立面
+cv: 栾立胜 / 山路和弘
+debut: 2025-07-18 · 战记2
+quote: 这就是灵遥小队。

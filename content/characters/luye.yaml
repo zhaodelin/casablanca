@@ -1,0 +1,20 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 鹿野
+en: LUYE
+role: 执行者 · 师姐
+faction: 妖灵会馆
+color: '#c86a3b'
+kw:
+  - 鹿野
+  - 师姐
+desc: 《战记2》登场。无限的弟子、小黑的师姐，长发作马尾、穿橙色工装的行动派。嘴上不饶人，出手极稳；任务之外的时间，她都留给屋顶、书和两只跟着她的小黄鸟。
+tags:
+  - 新角色
+  - 执行者
+  - 师姐
+cv: 朱婧 / 悠木碧
+debut: 2025-07-18 · 战记2
+quote: 师姐师姐！

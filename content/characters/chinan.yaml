@@ -1,0 +1,18 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 池年
+en: CHINIAN
+role: 长老
+faction: 妖灵会馆
+color: '#a8543c'
+kw:
+  - 池年
+desc: 会馆长老之一。辈分高、话不多，在「长老们」的设定稿里与同僚一同出现；面对灵遥的激进主张，他代表的是会馆里另一种更缓慢、也更审慎的声音。
+tags:
+  - 长老
+  - 会馆
+cv: 傅晨阳 / 诹访部顺一
+debut: 2025-07-18 · 战记2
+quote: 这就是长老们。

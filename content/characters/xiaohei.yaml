@@ -1,0 +1,19 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 小黑
+en: HEI
+role: 主角 · 猫妖
+faction: 无限门下
+color: '#2f6f8f'
+kw:
+  - 小黑
+desc: 一只失去家园的小猫妖，灵质空间里长着一整片森林。他在人类城市里流浪，被小白捡回家，又因一场「领域」的争夺被卷进妖精与人的旧账；最后在无限身边学会了一件事——不必再逃。
+tags:
+  - 灵质空间
+  - 领域
+  - 治愈
+cv: 山新 / 花泽香菜
+debut: 2011-04-08 · 第一集
+quote: 师父～云看起来好好吃噢～

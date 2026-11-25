@@ -1,0 +1,19 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+
+name: 哪吒
+en: NEZHA
+role: 会馆执行者 · 火系
+faction: 妖灵会馆
+color: '#d2452f'
+kw:
+  - 哪吒
+desc: 混天绫、火尖枪，双丸子头配一件涂鸦夹克。会馆里最不好惹的执行者之一，脾气比火还冲，却对小黑格外宽容——「罗小黑里的哪吒好潮」是当年观众给她的评语。
+tags:
+  - 火系
+  - 执行者
+  - 潮流
+cv: 山新
+debut: 2019-09-07 · 大电影
+quote: 啧～都快三亿了，慢吞吞的。

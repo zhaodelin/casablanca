@@ -1,0 +1,25 @@
+# 站点文案与首页数字。from: 表示由 data/derived.json 自动算出，value: 表示手写。
+
+meta:
+  title: 罗小黑战记
+  en: THE LEGEND OF HEI
+  sub: 设定 · 年表 · 人物
+  # intro 里的 {posts_total} / {images_total} 由 data/derived.json 自动替换
+  intro: 从 2011 年一条微博，到 2025 年五亿票房。这里是从两个官方微博（@电影罗小黑战记2、@罗小黑CAT）的 {posts_total} 条微博、{images_total} 张图片里，整理出的罗小黑世界。
+stats:
+  - label: 归档微博
+    from: posts_total
+  - label: 归档图片
+    from: images_total
+  - label: TV 剧集
+    from: episodes
+    note: 2011 → 2026，仍在更新
+  - label: 蓝溪镇话数
+    from: chapters
+    note: 2018-09-27 → 2026-02-28
+  - label: 院线电影
+    value: '2'
+    note: 2019 三亿 · 2025 五亿
+  - label: 年
+    value: '15'
+    note: 从一条微博到五亿票房
