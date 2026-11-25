@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>罗小黑战记 · 设定集与年表</title>
+<meta name="description" content="从 @电影罗小黑战记2 与 @罗小黑CAT 的 6627 条微博、5609 张图片里整理出的罗小黑世界：人物设定集、关系网、战记 1 / 2、番外故事、漫画蓝溪镇与整体时间线。" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230e1626'/%3E%3Ccircle cx='50' cy='56' r='26' fill='%23f4efe6'/%3E%3Ccircle cx='40' cy='52' r='6' fill='%230e1626'/%3E%3Ccircle cx='60' cy='52' r='6' fill='%230e1626'/%3E%3Cpath d='M34 34 L42 20 L50 33 Z' fill='%23f4efe6'/%3E%3Cpath d='M66 34 L58 20 L50 33 Z' fill='%23f4efe6'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#home">
+    <span class="nav__mark">黑</span>
+    <span class="nav__name">罗小黑战记<em>THE LEGEND OF HEI</em></span>
+  </a>
+  <nav class="nav__links">
+    <a href="#timeline">时间线</a>
+    <a href="#characters">人物设定集</a>
+    <a href="#network">关系网</a>
+    <a href="#film1">战记 1</a>
+    <a href="#film2">战记 2</a>
+    <a href="#extras">番外故事</a>
+    <a href="#comic">蓝溪镇</a>
+  </nav>
+  <button class="nav__menu" id="menuBtn" aria-label="菜单"><span></span><span></span><span></span></button>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero__bg"></div>
+  <div class="hero__veil"></div>
+  <div class="hero__inner">
+    <div class="hero__text">
+      <p class="eyebrow"><span>2011 — 2026</span><i></i><span>妖灵会馆档案</span></p>
+      <h1 class="hero__title">
+        <span class="t1">罗小黑</span>
+        <span class="t2">战 记</span>
+      </h1>
+      <p class="hero__sub">THE LEGEND OF HEI<i>设定集 · 关系网 · 年表</i></p>
+      <p class="hero__lead" id="heroIntro"></p>
+      <div class="hero__cta">
+        <a class="btn btn--solid" href="#characters">走进设定集</a>
+        <a class="btn btn--ghost" href="#timeline">看十五年时间线</a>
+      </div>
+    </div>
+    <figure class="hero__poster">
+      <img src="assets/img/f2-hero.jpg" alt="《罗小黑战记2》定档海报" />
+      <figcaption>《罗小黑战记 2》定档海报 · 2025-06-13</figcaption>
+    </figure>
+  </div>
+  <div class="hero__stats" id="heroStats"></div>
+  <a class="hero__scroll" href="#timeline"><span></span>向下</a>
+</section>
+
+<!-- ============ WORKS ============ -->
+<section class="sec sec--ink sec--works" id="works">
+  <div class="wrap">
+    <header class="sec__head reveal" style="margin-bottom:36px">
+      <p class="kicker">THE WORKS</p>
+      <h2>四条作品线，一个世界</h2>
+      <p class="lead">一部更新了十五年的 TV 动画、两部电影、一部连载八年的前史漫画，再加上散落在微博里的番外。它们共用同一套时间。</p>
+    </header>
+    <div class="grid grid--works" id="workGrid"></div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="sec sec--paper" id="timeline">
+  <div class="wrap">
+    <header class="sec__head reveal">
+      <p class="kicker">CHRONICLE</p>
+      <h2>十五年，按时间节点排好</h2>
+      <p class="lead">逐条排下来的是微博上真实发生的事：更新、定档、破亿、下映。切到「剧情 · 故事」，换一条线看——小黑自己走过的路：流浪、遇见、拜师、再出发。</p>
+    </header>
+
+    <div class="tabs reveal" id="tlTabs">
+      <button class="tab is-on" data-mode="all">全部</button>
+      <button class="tab" data-mode="work">作品 · 现实</button>
+      <button class="tab" data-mode="story">剧情 · 故事</button>
+    </div>
+
+    <div class="tl" id="tlWork"></div>
+    <div class="tl tl--story" id="tlStory" hidden></div>
+  </div>
+</section>
+
+<!-- ============ CHARACTERS ============ -->
+<section class="sec sec--ink" id="characters">
+  <div class="wrap">
+    <header class="sec__head reveal">
+      <p class="kicker">CHARACTERS</p>
+      <h2>人物设定集</h2>
+      <p class="lead">每一个角色都有一张从官方设定稿、漫画原格或海报里裁下来的头像。点开卡片，看身份、阵营、配音、首次登场，以及他们在 6627 条微博里被提到过多少次。</p>
+    </header>
+
+    <div class="chips reveal" id="charFilter"></div>
+    <div class="grid grid--chars" id="charGrid"></div>
+  </div>
+</section>
+
+<!-- ============ NETWORK ============ -->
+<section class="sec sec--paper" id="network">
+  <div class="wrap">
+    <header class="sec__head reveal">
+      <p class="kicker">RELATIONS</p>
+      <h2>人物关系网</h2>
+      <p class="lead">圆圈越大，说明在官微里被提到得越多。悬停在一个人身上，只留下与他有关的线；点一下，跳回他的设定卡。</p>
+    </header>
+    <div class="net reveal">
+      <div class="net__stage">
+        <svg id="netSvg" viewBox="0 0 1000 720" role="img" aria-label="罗小黑战记人物关系网"></svg>
+      </div>
+      <aside class="net__side">
+        <div class="net__legend">
+          <p class="net__lt">关系图例</p>
+          <ul id="netLegend"></ul>
+        </div>
+        <div class="net__tip" id="netTip">
+          <p>把鼠标放到人物上试试。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FILM 1 ============ -->
+<section class="film film--one" id="film1">
+  <div class="film__head wrap reveal">
+    <p class="kicker">FILM 01 · 2019</p>
+    <h2>罗小黑战记</h2>
+    <p class="film__en">THE LEGEND OF HEI</p>
+  </div>
+  <div class="wrap film__body">
+    <figure class="film__poster reveal">
+      <img src="assets/img/f1-hero.jpg" alt="《罗小黑战记》定档海报" />
+      <figcaption>定档海报 · 2019-07-24 · 11.2 万赞</figcaption>
+    </figure>
+    <div class="film__info reveal">
+      <div class="film__meta" id="f1meta"></div>
+      <p class="film__syn" id="f1syn"></p>
+      <blockquote class="film__quote" id="f1quote"></blockquote>
+      <div class="film__ms" id="f1ms"></div>
+    </div>
+  </div>
+  <div class="film__strip reveal">
+    <div class="strip" id="f1strip"></div>
+  </div>
+  <div class="wrap film__wide reveal">
+    <img src="assets/img/f1-world.jpg" alt="世界观海报" />
+    <p>世界观海报 · 2019-08-22</p>
+  </div>
+</section>
+
+<!-- ============ FILM 2 ============ -->
+<section class="film film--two" id="film2">
+  <div class="film__head wrap reveal">
+    <p class="kicker">FILM 02 · 2025</p>
+    <h2>罗小黑战记 2</h2>
+    <p class="film__en">THE LEGEND OF HEI Ⅱ</p>
+  </div>
+  <div class="wrap film__body film__body--rev">
+    <figure class="film__poster reveal">
+      <img src="assets/img/f2-poster-b.jpg" alt="《罗小黑战记2》海报" />
+      <figcaption>海报 · 2025-07-31</figcaption>
+    </figure>
+    <div class="film__info reveal">
+      <div class="film__meta" id="f2meta"></div>
+      <p class="film__syn" id="f2syn"></p>
+      <blockquote class="film__quote" id="f2quote"></blockquote>
+      <div class="film__ms" id="f2ms"></div>
+    </div>
+  </div>
+  <div class="film__strip reveal">
+    <div class="strip" id="f2strip"></div>
+  </div>
+  <div class="wrap design reveal">
+    <header class="design__head">
+      <p class="kicker">ART BOOK</p>
+      <h3>设定稿：这就是他们</h3>
+      <p>2025 年夏天，官微用一个月的时间把《战记 2》的设定稿一张张放了出来。这里挑了七张。</p>
+    </header>
+    <div class="design__grid" id="designGrid"></div>
+  </div>
+</section>
+
+<!-- ============ EXTRAS ============ -->
+<section class="sec sec--ink" id="extras">
+  <div class="wrap">
+    <header class="sec__head reveal">
+      <p class="kicker">SIDE STORIES</p>
+      <h2>番外故事</h2>
+      <p class="lead">正篇之外，罗小黑还有一条很长的番外线：动画特别篇、MV、番外漫画、电影番外五连。它们补完的从来不是设定，是人。</p>
+    </header>
+    <div class="grid grid--extras" id="extraGrid"></div>
+
+    <div class="eps reveal">
+      <header class="eps__head">
+        <h3>TV 正篇 · 45 集</h3>
+        <p>2011 年 4 月 8 日第一集，2026 年 11 月 24 日第四十五集。点一集看标题。</p>
+      </header>
+      <div class="eps__grid" id="epGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMIC ============ -->
+<section class="sec sec--paper" id="comic">
+  <div class="wrap">
+    <header class="sec__head reveal">
+      <p class="kicker">MANHUA · 蓝溪镇</p>
+      <h2>漫画《蓝溪镇》</h2>
+      <p class="lead">老君的前史。战乱年代他捡回一个人类女孩，然后用很久很久，学怎么放手。2018 年 9 月 27 日开更，2026 年 2 月 28 日第 139 话「再会」。</p>
+    </header>
+
+    <div class="comic__top reveal">
+      <figure class="comic__img">
+        <img src="assets/img/comic-first.jpg" alt="《蓝溪镇》第一话" />
+        <figcaption>第一话 · 2018-09-27</figcaption>
+      </figure>
+      <div class="comic__facts" id="comicFacts"></div>
+    </div>
+
+    <div class="arcs reveal" id="arcs"></div>
+
+    <div class="chap reveal">
+      <header class="chap__head">
+        <h3>全部 139 话</h3>
+        <div class="chap__tabs" id="chapTabs"></div>
+      </header>
+      <div class="chap__grid" id="chapGrid"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="foot__brand">
+      <span class="nav__mark">黑</span>
+      <div>
+        <strong>罗小黑战记 · 设定集与年表</strong>
+        <p>一个基于官方微博归档的非官方资料站。</p>
+      </div>
+    </div>
+    <div class="foot__cols">
+      <div>
+        <h4>数据来源</h4>
+        <p>@电影罗小黑战记2 · 4974 条微博<br />@罗小黑CAT · 1653 条微博<br />图片 5609 张 · 抓取于 2026-11-25</p>
+      </div>
+      <div>
+        <h4>关于本站</h4>
+        <p>页面内的文字与年表由归档数据整理；图片版权归《罗小黑战记》原作方与寒木春华所有，仅作资料展示。</p>
+      </div>
+      <div>
+        <h4>索引</h4>
+        <p><a href="#characters">人物设定集</a> · <a href="#network">关系网</a><br /><a href="#film1">战记 1</a> · <a href="#film2">战记 2</a><br /><a href="#extras">番外</a> · <a href="#comic">蓝溪镇</a></p>
+      </div>
+    </div>
+  </div>
+  <p class="foot__copy">THE LEGEND OF HEI · 2011 — 2026 · 不再流浪</p>
+</footer>
+
+<!-- ============ MODAL ============ -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal__mask" data-close></div>
+  <div class="modal__box" role="dialog" aria-modal="true">
+    <button class="modal__x" data-close aria-label="关闭">×</button>
+    <div class="modal__body" id="modalBody"></div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox__mask" data-close></div>
+  <img id="lightboxImg" alt="" />
+  <button class="lightbox__x" data-close aria-label="关闭">×</button>
+</div>
+
+<script src="assets/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
