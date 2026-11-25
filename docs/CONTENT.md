@@ -170,8 +170,9 @@ python tools/build_content.py --check # 生成物是否最新
 年表 `sort` 是否重复、`work`/`kind` 取值是否合法、图片文件是否真实存在、
 `data/derived.json` 与 `data/series.json` 是否自洽、`data.js` 是否与内容同步。
 
-CI（`.github/workflows/ci.yml`）在每次 push 与 PR 上跑这两条；Pages
-（`.github/workflows/pages.yml`）在 `main` 上把仓库根目录部署成站点。
+CI（`.github/workflows/ci.yml`）在每次 push 与 PR 上跑这两条；Pages 走**分支部署**
+（Settings → Pages：Deploy from a branch，`main` / 根目录），推上去即发布，不需要额外 workflow。
+仓库根的 `.nojekyll` 让 Pages 跳过 Jekyll 处理。
 
 ## 5. 常见坑
 

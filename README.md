@@ -63,7 +63,8 @@ docs/CONTENT.md         维护指南
 ## 校验与发布
 
 - CI：`.github/workflows/ci.yml` 在每次 push/PR 跑 `validate.py` 与 `build_content.py --check`。
-- Pages：`.github/workflows/pages.yml` 在 `main` 上把仓库根目录发布成静态站。
+- Pages：走分支部署（`main` / 根目录），推上去即发布；`.nojekyll` 让 Pages 跳过 Jekyll。
+  线上地址：https://zhaodelin.github.io/casablanca/
 
 ## 版权
 
