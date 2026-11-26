@@ -30,7 +30,18 @@ MONO_FG = (246, 241, 230)
 
 
 def source_path(item) -> pathlib.Path:
-    return ARCHIVES / ARCH_DIR[item["archive"]] / item["source"]
+    """归档里有时会把旧目录挪到「images - 副本」，主路径找不到时回退过去。"""
+    base = ARCHIVES / ARCH_DIR[item["archive"]]
+    src = item["source"]
+    p = base / src
+    if p.exists():
+        return p
+    alt = src.replace("images/", "images - 副本/", 1)
+    if alt != src:
+        q = base / alt
+        if q.exists():
+            return q
+    return p
 
 
 def crop_box(im: Image.Image, box):

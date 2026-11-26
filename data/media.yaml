@@ -185,59 +185,59 @@ images:
       - 0.1
 avatars:
   - out: assets/avatars/xiaohei.jpg
-    archive: cat
-    source: images/2011-04/eekMpG_01.jpg
+    archive: chars
+    source: 替换头像/小黑.jpg
     box:
-      - 0.17
-      - 0.335
-      - 0.33
-      - 0.34
-    note: 第一集海报上的小黑侧脸。
+      - 0.0
+      - 0.0
+      - 1.0
+      - 1.0
+    note: 官方坐姿头像（360×360），整图。
   - out: assets/avatars/infin.jpg
-    archive: film2
-    source: images/2025-07/PD0jr12yV_02.jpg
+    archive: chars
+    source: 替换头像/无限.jpg
     box:
-      - 0.395
-      - 0.1408
-      - 0.1325
-      - 0.0483
-    note: 《罗小黑战记2》2025-07 无限九套服装设计稿，第 1 行正面头部。
+      - 0.533
+      - 0.163
+      - 0.208
+      - 0.117
+    note: 2025 电影 2 色卡海报（粉青/青灰），头部特写。
   - out: assets/avatars/luye.jpg
-    archive: cat
-    source: images/2025-11/QbMwNrxYp_01.jpg
+    archive: chars
+    source: 替换头像/鹿野.jpg
     box:
-      - 0.26
-      - 0.43
-      - 0.26
-      - 0.26
-    note: 「师姐师姐！」原图里的鹿野侧脸。
+      - 0.185
+      - 0.062
+      - 0.35
+      - 0.197
+    note: 2025 电影 2 色卡海报（黛蓝/缟色），头部特写。
   - out: assets/avatars/nezha.jpg
-    archive: film2
-    source: images/2025-07/PDaUZqA1P_01.jpg
+    archive: chars
+    source: 替换头像/哪吒.jpg
     box:
-      - 0.17
-      - 0.0836
-      - 0.25
-      - 0.0715
-    note: 《罗小黑战记2》2025-07 哪吒设计稿，第一行正面头部。
+      - 0.272
+      - 0.222
+      - 0.35
+      - 0.197
+    note: 2025 电影 2 色卡海报（胭脂红/雌黄），头部特写。
   - out: assets/avatars/lingyao.jpg
-    archive: film2
-    source: images/2025-08/PE4iUmgUL_01.jpg
+    archive: chars
+    source: 替换头像/灵遥.jpg
     box:
-      - 0.545
-      - 0.2307
-      - 0.15
-      - 0.031
-    note: 《罗小黑战记2》2025-08 灵遥小队设计稿，银发橙工装头部特写。
+      - 0.245
+      - 0.062
+      - 0.35
+      - 0.197
+    note: 2025 电影 2 色卡海报（青玉色/蟹壳青），头部特写。
   - out: assets/avatars/chinan.jpg
-    archive: film2
-    source: images/2025-07/PDjaqp6io_01.jpg
+    archive: chars
+    source: 替换头像/池年.jpg
     box:
-      - 0.4575
-      - 0.2536
-      - 0.27
-      - 0.0543
-    note: 《罗小黑战记2》2025-07 长老们设计稿，池年头像特写（红发白袍）。
+      - 0.295
+      - 0.092
+      - 0.35
+      - 0.197
+    note: 2025 电影 2 色卡海报（沉香/赭石），头部特写。
   - out: assets/avatars/fengxi.jpg
     archive: film2
     source: images/2019-09/I6u93nzAA_01.jpg
@@ -311,23 +311,23 @@ avatars:
       - 1.0
     note: 2015-09「@比丢BIU 头像三只」600×600 官方头像，第一张（抱铅笔）。
   - out: assets/avatars/agen.jpg
-    archive: cat
-    source: images/2026-11/RseKBnGCy_01.jpg
+    archive: chars
+    source: 替换头像/阿根.jpg
     box:
-      - 0.5833
-      - 0.1343
-      - 0.4167
-      - 0.7407
-    note: 2026-11 第 44 集《冬冬拯救行动方案五》官方横幅，蓝发精灵耳少年（判为阿根）。
+      - 0.0
+      - 0.0
+      - 1.0
+      - 1.0
+    note: 官方坐姿头像（360×360），整图。
   - out: assets/avatars/xiaobai.jpg
-    archive: cat
-    source: images/2026-11/Rq6LJj4E5_01.jpg
+    archive: chars
+    source: 替换头像/小白.jpg
     box:
-      - 0.5062
-      - 0.5852
-      - 0.1172
-      - 0.2083
-    note: 2026-11 第 42 集《龙游的风在轻轻地吹》官方横幅，橙发少女（判为小白）。
+      - 0.0
+      - 0.0
+      - 1.0
+      - 1.0
+    note: 官方坐姿头像（271×270），整图。
   - out: assets/avatars/heixiu.jpg
     archive: cat
     source: images/2015-03/C9jElsFU8_01.gif
@@ -338,18 +338,23 @@ avatars:
       - 0.44
     note: 2015-03 GIF 首帧（小黑与嘿咻），灰白大眼猫（判为嘿咻），源图仅 250×200。
   - out: assets/avatars/dongdong.jpg
-    archive: cat
-    source: images/2026-11/Rq6LJj4E5_01.jpg
+    archive: chars
+    source: 替换头像/冬冬.jpg
     box:
-      - 0.6979
-      - 0.1204
-      - 0.1354
-      - 0.2407
-    note: 2026-11 第 42 集《龙游的风在轻轻地吹》官方横幅，粉发少女（判为冬冬）。
+      - 0.0
+      - 0.0
+      - 1.0
+      - 1.0
+    note: 官方头像（270×343），居中裁方。
   - out: assets/avatars/shanxin.jpg
-    generator: monogram
-    char: 山
-    note: 山新没有单人头像，用深蓝底 + 宋体字占位。
+    archive: chars
+    source: 替换头像/山新.jpg
+    box:
+      - 0.0
+      - 0.0
+      - 1.0
+      - 1.0
+    note: 官方坐姿头像（360×360），整图（原来是占位字）。
   - out: assets/avatars/mtjj.jpg
     generator: monogram
     char: 木
@@ -368,13 +373,13 @@ avatars:
     note: 大电影剧照（夜色里听音乐），面孔偏暗，提亮后裁切。
   - out: assets/avatars/jiulao.jpg
     archive: chars
-    source: 角色识别图集/鸠老.jpg
+    source: 替换头像/鸠老.jpg
     box:
-      - 0.190
       - 0.265
-      - 0.085
-      - 0.125
-    note: 大电影设定稿（鸠老转面图）的正面头像。
+      - 0.147
+      - 0.35
+      - 0.197
+    note: 2025 电影 2 色卡海报（紫檀/深玄），头部特写。
   - out: assets/avatars/ruoshui.jpg
     archive: chars
     source: 角色识别图集/若水.jpg
