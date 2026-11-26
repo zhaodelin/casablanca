@@ -437,6 +437,12 @@ window.LXH = {
    "cv": "山新 / 花泽香菜",
    "debut": "2011-04-08 · 第一集",
    "quote": "师父～云看起来好好吃噢～",
+   "species": "妖精",
+   "age": "6 岁",
+   "height": "—",
+   "power": "空间系 · 领域 / 空间系 · 传送 / 御灵系 · 金",
+   "official": "小黑这个时候还不姓罗，在四年后，他会遇到那个小姑娘。",
+   "source": "官方设定集 P004",
    "posts": 1445,
    "avatar": "assets/avatars/xiaohei.jpg"
   },
@@ -460,6 +466,12 @@ window.LXH = {
    "cv": "刘明月 / 宫野真守",
    "debut": "2019-09-07 · 大电影",
    "quote": "小黑：师父是这个世界上最好的人～",
+   "species": "人类",
+   "age": "437 岁",
+   "height": "174cm",
+   "power": "御灵系 · 金 / 空间系 · 吞噬",
+   "official": "会馆最强执行者（执法者），最强人类。",
+   "source": "官方设定集 P006",
    "posts": 286,
    "avatar": "assets/avatars/infin.jpg"
   },
@@ -483,6 +495,12 @@ window.LXH = {
    "cv": "朱婧 / 悠木碧",
    "debut": "2025-07-18 · 战记2",
    "quote": "师姐师姐！",
+   "species": "",
+   "age": "",
+   "height": "",
+   "power": "",
+   "official": "",
+   "source": "",
    "posts": 92,
    "avatar": "assets/avatars/luye.jpg"
   },
@@ -505,6 +523,12 @@ window.LXH = {
    "cv": "山新",
    "debut": "2019-09-07 · 大电影",
    "quote": "啧～都快三亿了，慢吞吞的。",
+   "species": "妖精",
+   "age": "3000 岁+",
+   "height": "123cm",
+   "power": "御灵系 · 火 / 生灵系 · 幻化 / 锁御系 · 灵御",
+   "official": "这还需要介绍吗？这还需要介绍吗？",
+   "source": "官方设定集 P017",
    "posts": 38,
    "avatar": "assets/avatars/nezha.jpg"
   },
@@ -527,6 +551,12 @@ window.LXH = {
    "cv": "栾立胜 / 山路和弘",
    "debut": "2025-07-18 · 战记2",
    "quote": "这就是灵遥小队。",
+   "species": "",
+   "age": "",
+   "height": "",
+   "power": "",
+   "official": "",
+   "source": "",
    "posts": 6,
    "avatar": "assets/avatars/lingyao.jpg"
   },
@@ -548,8 +578,98 @@ window.LXH = {
    "cv": "傅晨阳 / 诹访部顺一",
    "debut": "2025-07-18 · 战记2",
    "quote": "这就是长老们。",
+   "species": "",
+   "age": "",
+   "height": "",
+   "power": "",
+   "official": "",
+   "source": "",
    "posts": 7,
    "avatar": "assets/avatars/chinan.jpg"
+  },
+  {
+   "key": "panjing",
+   "name": "潘靖",
+   "en": "PAN JING",
+   "role": "馆长 · 长老",
+   "faction": "妖灵会馆（龙游）",
+   "color": "#8a6a3f",
+   "kw": [
+    "潘靖"
+   ],
+   "desc": "龙游会馆的馆长，穿浅色羽织、拄一根手杖，耳朵上总挂着耳机。喜欢听音乐，说话慢条斯理；在馆里他是那个把规矩和人情都捏在手里的人。",
+   "tags": [
+    "馆长",
+    "长老",
+    "龙游会馆"
+   ],
+   "cv": "—（官微未公布）",
+   "debut": "2019-09-07 · 大电影",
+   "quote": "",
+   "species": "妖精",
+   "age": "450 岁+",
+   "height": "187cm",
+   "power": "生灵系 · 培元 / 生灵系 · 化生 / 心灵系 · 传音",
+   "official": "龙游会馆的馆长，喜欢听音乐。",
+   "source": "官方设定集 P018",
+   "posts": 2,
+   "avatar": "assets/avatars/panjing.jpg"
+  },
+  {
+   "key": "guanxuan",
+   "name": "冠萱",
+   "en": "GUANXUAN",
+   "role": "会馆管事",
+   "faction": "妖灵会馆（龙游）",
+   "color": "#3f6f8a",
+   "kw": [
+    "冠萱"
+   ],
+   "desc": "潘靖的弟子，会馆里的日常事务多半经他的手。白衣配橙金色披领，做事实在，是那种交代下去就不用再问第二遍的人。",
+   "tags": [
+    "潘靖弟子",
+    "会馆管事",
+    "生灵系"
+   ],
+   "cv": "—（官微未公布）",
+   "debut": "2019-09-07 · 大电影",
+   "quote": "",
+   "species": "妖精",
+   "age": "25 岁",
+   "height": "171cm",
+   "power": "生灵系 · 念磁 / 心灵系 · 清洗",
+   "official": "潘靖的弟子，协助管理会馆日常事务，非常可靠。",
+   "source": "官方设定集 P010",
+   "posts": 2,
+   "avatar": "assets/avatars/guanxuan.jpg"
+  },
+  {
+   "key": "yuxi",
+   "name": "羽夕",
+   "en": "YUXI",
+   "role": "暗卫",
+   "faction": "妖灵会馆（龙游）",
+   "color": "#2f4f6f",
+   "kw": [
+    "羽夕"
+   ],
+   "desc": "斗笠压得很低，帘子后是一张白底红纹的面具。潘靖的暗卫，比潘靖更早入会馆；擅长的事不太方便写在明面上——暗杀。",
+   "tags": [
+    "暗卫",
+    "隐匿",
+    "强化系"
+   ],
+   "cv": "—（官微未公布）",
+   "debut": "2019-09-07 · 大电影",
+   "quote": "",
+   "species": "妖精",
+   "age": "500 岁+",
+   "height": "162cm",
+   "power": "生灵系 · 隐匿 / 强化系 · 强化",
+   "official": "潘靖的暗卫，比潘靖更早加入会馆，非常擅长暗杀。",
+   "source": "官方设定集 P010",
+   "posts": 1,
+   "avatar": "assets/avatars/yuxi.jpg"
   },
   {
    "key": "laojun",
@@ -570,8 +690,70 @@ window.LXH = {
    "cv": "—（官微未公布）",
    "debut": "2014-04-28 · 第十集",
    "quote": "老君的庇佑",
+   "species": "",
+   "age": "",
+   "height": "",
+   "power": "",
+   "official": "",
+   "source": "",
    "posts": 22,
    "avatar": "assets/avatars/laojun.jpg"
+  },
+  {
+   "key": "jiulao",
+   "name": "鸠老",
+   "en": "JIULAO",
+   "role": "老前辈 · 执行者",
+   "faction": "妖灵会馆",
+   "color": "#7a3b2e",
+   "kw": [
+    "鸠老"
+   ],
+   "desc": "辈分极高的老前辈，长着一张青灰色的脸、一撮长须，戴顶小冠，红黑长袍拖到脚面。年纪大到已经不把资历当回事，如今依旧在执行者的名单上。",
+   "tags": [
+    "老前辈",
+    "执行者",
+    "生灵系"
+   ],
+   "cv": "—（官微未公布）",
+   "debut": "2019-09-07 · 大电影",
+   "quote": "",
+   "species": "妖精",
+   "age": "800 岁+",
+   "height": "171cm",
+   "power": "生灵系 · 洞察 / 造物系 · 仿生 / 强化系 · 凌刑",
+   "official": "辈分很高的老前辈，目前也在当执行者。",
+   "source": "官方设定集 P016",
+   "posts": 6,
+   "avatar": "assets/avatars/jiulao.jpg"
+  },
+  {
+   "key": "ruoshui",
+   "name": "若水",
+   "en": "RUOSHUI",
+   "role": "鸠老之徒",
+   "faction": "妖灵会馆",
+   "color": "#c8862f",
+   "kw": [
+    "若水"
+   ],
+   "desc": "橙毛狐耳的小个子，背着比自己还高的卷轴与葫芦，腰间系一片大叶子。鸠老的徒弟，最崇拜的人是无限。",
+   "tags": [
+    "鸠老之徒",
+    "锁御系",
+    "强化系"
+   ],
+   "cv": "—（官微未公布）",
+   "debut": "2019-09-07 · 大电影",
+   "quote": "",
+   "species": "妖精",
+   "age": "24 岁",
+   "height": "108cm",
+   "power": "锁御系 · 制灵 / 强化系 · 巨力",
+   "official": "鸠老的徒弟，崇拜无限。",
+   "source": "官方设定集 P015",
+   "posts": 7,
+   "avatar": "assets/avatars/ruoshui.jpg"
   },
   {
    "key": "qingning",
@@ -591,6 +773,12 @@ window.LXH = {
    "cv": "—",
    "debut": "2018-09-27 · 蓝溪镇第一话",
    "quote": "清凝上天啦～",
+   "species": "",
+   "age": "",
+   "height": "",
+   "power": "",
+   "official": "",
+   "source": "",
    "posts": 10,
    "avatar": "assets/avatars/qingning.jpg"
   },
@@ -612,8 +800,42 @@ window.LXH = {
    "cv": "—（官微未公布）",
    "debut": "2013-12-30 · 第九集",
    "quote": "谛听！来下棋吧！",
+   "species": "",
+   "age": "",
+   "height": "",
+   "power": "",
+   "official": "",
+   "source": "",
    "posts": 11,
    "avatar": "assets/avatars/dishing.jpg"
+  },
+  {
+   "key": "yifeng",
+   "name": "逸风",
+   "en": "YIFENG",
+   "role": "治疗者",
+   "faction": "妖灵会馆（龙游）",
+   "color": "#4a8a8a",
+   "kw": [
+    "逸风"
+   ],
+   "desc": "白头巾、蓝卫衣、短裤配紧身裤的少年，看着还没长大，却是会馆里数得着的治疗者。手一抬，伤就收得住。",
+   "tags": [
+    "治疗",
+    "生灵系",
+    "回复"
+   ],
+   "cv": "—（官微未公布）",
+   "debut": "2019-09-07 · 大电影",
+   "quote": "",
+   "species": "妖精",
+   "age": "16 岁",
+   "height": "134cm",
+   "power": "生灵系 · 回复",
+   "official": "拥有非常优秀的治疗能力。",
+   "source": "官方设定集 P010",
+   "posts": 2,
+   "avatar": "assets/avatars/yifeng.jpg"
   },
   {
    "key": "fengxi",
@@ -634,6 +856,12 @@ window.LXH = {
    "cv": "郝祥海",
    "debut": "2019-09-07 · 大电影",
    "quote": "如果风息没那么执着，他就会这样玩着新款手机吧～",
+   "species": "妖精",
+   "age": "210 岁+",
+   "height": "175cm",
+   "power": "御灵系 · 木 / 生灵系 · 豪夺",
+   "official": "离岛组的领导人。",
+   "source": "官方设定集 P008",
    "posts": 45,
    "avatar": "assets/avatars/fengxi.jpg"
   },
@@ -655,6 +883,12 @@ window.LXH = {
    "cv": "叮当",
    "debut": "2019-09-07 · 大电影",
    "quote": "电影番外漫画《洛竹》",
+   "species": "妖精",
+   "age": "197 岁",
+   "height": "167cm",
+   "power": "御灵系 · 木",
+   "official": "心地善良，虽然很想夺回故乡，但他不赞同风息的做法。",
+   "source": "官方设定集 P013",
    "posts": 19,
    "avatar": "assets/avatars/luozhu.jpg"
   },
@@ -676,6 +910,12 @@ window.LXH = {
    "cv": "夏侯落枫",
    "debut": "2019-09-07 · 大电影",
    "quote": "设计手稿",
+   "species": "妖精",
+   "age": "350 岁+",
+   "height": "146cm",
+   "power": "御灵系 · 冰",
+   "official": "虚淮非常强，可惜他碰到的是两个变态强（－－）。",
+   "source": "官方设定集 P012",
    "posts": 18,
    "avatar": "assets/avatars/xuhuai.jpg"
   },
@@ -697,6 +937,12 @@ window.LXH = {
    "cv": "—",
    "debut": "2019-09-07 · 大电影",
    "quote": "设计手稿",
+   "species": "妖精",
+   "age": "185 岁",
+   "height": "162cm",
+   "power": "御灵系 · 火",
+   "official": "从小跟着风息他们，虽然很大只，其实年龄是最小的。看着很凶，其实很乖，不太会讲话。",
+   "source": "官方设定集 P014",
    "posts": 12,
    "avatar": "assets/avatars/tianhu.jpg"
   },
@@ -718,6 +964,12 @@ window.LXH = {
    "cv": "—",
    "debut": "2012-12-21 · 第五集",
    "quote": "比丢君登场",
+   "species": "",
+   "age": "",
+   "height": "",
+   "power": "",
+   "official": "",
+   "source": "",
    "posts": 63,
    "avatar": "assets/avatars/bidiu.jpg"
   },
@@ -739,6 +991,12 @@ window.LXH = {
    "cv": "—",
    "debut": "2013-03-21 · 第六集",
    "quote": "《罗小黑战记》第六集 阿根",
+   "species": "",
+   "age": "",
+   "height": "",
+   "power": "",
+   "official": "",
+   "source": "",
    "posts": 7,
    "avatar": "assets/avatars/agen.jpg"
   },
@@ -760,6 +1018,12 @@ window.LXH = {
    "cv": "—",
    "debut": "2011-04-08 · 第一集",
    "quote": "这是我的主人小白～可爱么喵",
+   "species": "",
+   "age": "",
+   "height": "",
+   "power": "",
+   "official": "",
+   "source": "",
    "posts": 18,
    "avatar": "assets/avatars/xiaobai.jpg"
   },
@@ -782,6 +1046,12 @@ window.LXH = {
    "cv": "—",
    "debut": "2013-07-02 · 《罗小白战记》",
    "quote": "嘿咻",
+   "species": "",
+   "age": "",
+   "height": "",
+   "power": "",
+   "official": "",
+   "source": "",
    "posts": 34,
    "avatar": "assets/avatars/heixiu.jpg"
   },
@@ -804,6 +1074,12 @@ window.LXH = {
    "cv": "山新（本尊）",
    "debut": "2011 · TV",
    "quote": "想和小白山新一起玩游戏么？",
+   "species": "",
+   "age": "",
+   "height": "",
+   "power": "",
+   "official": "",
+   "source": "",
    "posts": 22,
    "avatar": "assets/avatars/shanxin.jpg"
   },
@@ -825,6 +1101,12 @@ window.LXH = {
    "cv": "—",
    "debut": "2026-11-17 · 第四十四集",
    "quote": "冬冬拯救行动方案五",
+   "species": "",
+   "age": "",
+   "height": "",
+   "power": "",
+   "official": "",
+   "source": "",
    "posts": 4,
    "avatar": "assets/avatars/dongdong.jpg"
   },
@@ -847,6 +1129,12 @@ window.LXH = {
    "cv": "—",
    "debut": "2011",
    "quote": "@MTJJ木头",
+   "species": "",
+   "age": "",
+   "height": "",
+   "power": "",
+   "official": "",
+   "source": "",
    "posts": 87,
    "avatar": "assets/avatars/mtjj.jpg"
   }
@@ -961,6 +1249,41 @@ window.LXH = {
    "mtjj",
    "xiaohei",
    "创造者"
+  ],
+  [
+   "jiulao",
+   "ruoshui",
+   "师徒"
+  ],
+  [
+   "ruoshui",
+   "infin",
+   "崇拜"
+  ],
+  [
+   "jiulao",
+   "infin",
+   "会馆同僚"
+  ],
+  [
+   "panjing",
+   "guanxuan",
+   "弟子"
+  ],
+  [
+   "panjing",
+   "yuxi",
+   "暗卫"
+  ],
+  [
+   "panjing",
+   "jiulao",
+   "会馆同僚"
+  ],
+  [
+   "yifeng",
+   "panjing",
+   "会馆同僚"
   ]
  ],
  "films": {

@@ -101,6 +101,14 @@ def main():
                 err(f"content/characters/{f.name} 缺字段 {field}")
         if c.get("posts") is not None:
             err(f"content/characters/{f.name} 不要手写 posts，改由 data/derived.json 的 mentions 自动填")
+        if c.get("species") and c["species"] not in ("妖精", "人类"):
+            err(f"content/characters/{f.name} 的 species 只能是 妖精 / 人类，现在是 {c['species']!r}")
+        if c.get("height") and c["height"] != "—" and not re.fullmatch(r"\d+cm", str(c["height"])):
+            err(f"content/characters/{f.name} 的 height 要写成 174cm 这种，或 '—'")
+        if c.get("age") and not re.search(r"岁", str(c["age"])):
+            err(f"content/characters/{f.name} 的 age 要带「岁」，例如 197 岁 / 800 岁+")
+        if c.get("official") and not c.get("source"):
+            err(f"content/characters/{f.name} 写了 official（设定集原文）就要写 source（出处页码）")
         asset_ok(c.get("avatar"), f"characters/{f.name}")
         chars[key] = c
     missing = [k for k in order if k not in chars]

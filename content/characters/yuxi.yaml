@@ -1,0 +1,25 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+# species/age/height/power/official 来自官方设定集《罗小黑战记大电影》人物页。
+
+name: 羽夕
+en: YUXI
+role: 暗卫
+faction: 妖灵会馆（龙游）
+color: "#2f4f6f"
+kw:
+  - 羽夕
+desc: 斗笠压得很低，帘子后是一张白底红纹的面具。潘靖的暗卫，比潘靖更早入会馆；擅长的事不太方便写在明面上——暗杀。
+tags:
+  - 暗卫
+  - 隐匿
+  - 强化系
+cv: —（官微未公布）
+debut: "2019-09-07 · 大电影"
+species: 妖精
+age: "500 岁+"
+height: 162cm
+power: "生灵系 · 隐匿 / 强化系 · 强化"
+official: 潘靖的暗卫，比潘靖更早加入会馆，非常擅长暗杀。
+source: "官方设定集 P010"

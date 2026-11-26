@@ -67,3 +67,26 @@ relations:
   - from: mtjj
     to: xiaohei
     label: 创造者
+
+  # —— 来自官方设定集的人物页（2026-11 识别）——
+  - from: jiulao
+    to: ruoshui
+    label: 师徒
+  - from: ruoshui
+    to: infin
+    label: 崇拜
+  - from: jiulao
+    to: infin
+    label: 会馆同僚
+  - from: panjing
+    to: guanxuan
+    label: 弟子
+  - from: panjing
+    to: yuxi
+    label: 暗卫
+  - from: panjing
+    to: jiulao
+    label: 会馆同僚
+  - from: yifeng
+    to: panjing
+    label: 会馆同僚

@@ -1,0 +1,25 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+# species/age/height/power/official 来自官方设定集《罗小黑战记大电影》人物页。
+
+name: 潘靖
+en: "PAN JING"
+role: "馆长 · 长老"
+faction: 妖灵会馆（龙游）
+color: "#8a6a3f"
+kw:
+  - 潘靖
+desc: 龙游会馆的馆长，穿浅色羽织、拄一根手杖，耳朵上总挂着耳机。喜欢听音乐，说话慢条斯理；在馆里他是那个把规矩和人情都捏在手里的人。
+tags:
+  - 馆长
+  - 长老
+  - 龙游会馆
+cv: —（官微未公布）
+debut: "2019-09-07 · 大电影"
+species: 妖精
+age: "450 岁+"
+height: 187cm
+power: "生灵系 · 培元 / 生灵系 · 化生 / 心灵系 · 传音"
+official: 龙游会馆的馆长，喜欢听音乐。
+source: "官方设定集 P018"

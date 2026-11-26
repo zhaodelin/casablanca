@@ -6,6 +6,12 @@ name: 天虎
 en: TIANHU
 role: 风息同伴 · 东北虎
 faction: 风息一派
+species: 妖精
+age: "185 岁"
+height: 162cm
+power: "御灵系 · 火"
+official: 从小跟着风息他们，虽然很大只，其实年龄是最小的。看着很凶，其实很乖，不太会讲话。
+source: "官方设定集 P014"
 color: '#8f6b3f'
 kw:
   - 天虎

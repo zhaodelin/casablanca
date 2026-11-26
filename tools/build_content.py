@@ -82,6 +82,12 @@ def build_characters(derived):
             "cv": c.get("cv", "—"),
             "debut": c.get("debut", ""),
             "quote": c.get("quote", ""),
+            "species": c.get("species", ""),
+            "age": c.get("age", ""),
+            "height": c.get("height", ""),
+            "power": c.get("power", ""),
+            "official": c.get("official", ""),
+            "source": c.get("source", ""),
             "posts": mentions.get(key, 0),
             "avatar": f"assets/avatars/{key}.jpg",
         })

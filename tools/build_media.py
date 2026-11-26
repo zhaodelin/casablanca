@@ -18,13 +18,13 @@ import os
 import pathlib
 
 import yaml
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageEnhance, ImageFont
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 MEDIA = DATA / "media.yaml"
 ARCHIVES = pathlib.Path(os.environ.get("ARCHIVES", ROOT.parent))
-ARCH_DIR = {"film2": "luoxiaohei2", "cat": "luoxiaoheicat"}
+ARCH_DIR = {"film2": "luoxiaohei2", "cat": "luoxiaoheicat", "chars": "归档图片整理"}
 MONO_BG = (31, 56, 100)
 MONO_FG = (246, 241, 230)
 
@@ -45,6 +45,20 @@ def center_square(im: Image.Image) -> Image.Image:
     return im.crop(((w - s) // 2, (h - s) // 2, (w - s) // 2 + s, (h - s) // 2 + s))
 
 
+def apply_adjust(im: Image.Image, item) -> Image.Image:
+    """adjust: {brightness, contrast, color, sharpness}，用于提亮夜景剧照。"""
+    adj = item.get("adjust") or {}
+    if adj.get("brightness"):
+        im = ImageEnhance.Brightness(im).enhance(adj["brightness"])
+    if adj.get("contrast"):
+        im = ImageEnhance.Contrast(im).enhance(adj["contrast"])
+    if adj.get("color"):
+        im = ImageEnhance.Color(im).enhance(adj["color"])
+    if adj.get("sharpness"):
+        im = ImageEnhance.Sharpness(im).enhance(adj["sharpness"])
+    return im
+
+
 def build_image(item, check=False, force=False):
     src = source_path(item)
     out = ROOT / item["out"]
@@ -62,6 +76,7 @@ def build_image(item, check=False, force=False):
         im = im.rotate(item["rotate"], expand=True)
     if item.get("crop"):
         im = crop_box(im, item["crop"])
+    im = apply_adjust(im, item)
     w, h = im.size
     if item.get("width"):          # 指定成品宽度（可能放大，用于与历史文件保持一致）
         target = int(item["width"])
@@ -116,7 +131,8 @@ def build_avatar(item, check=False, force=False):
     if getattr(im, "is_animated", False):
         im.seek(0)
     im = im.convert("RGB")
-    im = center_square(crop_box(im, item["box"]))
+    im = apply_adjust(crop_box(im, item["box"]), item)
+    im = center_square(im)
     im = im.resize((512, 512), Image.LANCZOS)
     out.parent.mkdir(parents=True, exist_ok=True)
     im.save(out, "JPEG", quality=88, optimize=True)

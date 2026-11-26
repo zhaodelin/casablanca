@@ -1,0 +1,25 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+# species/age/height/power/official 来自官方设定集《罗小黑战记大电影》人物页。
+
+name: 若水
+en: RUOSHUI
+role: 鸠老之徒
+faction: 妖灵会馆
+color: "#c8862f"
+kw:
+  - 若水
+desc: 橙毛狐耳的小个子，背着比自己还高的卷轴与葫芦，腰间系一片大叶子。鸠老的徒弟，最崇拜的人是无限。
+tags:
+  - 鸠老之徒
+  - 锁御系
+  - 强化系
+cv: —（官微未公布）
+debut: "2019-09-07 · 大电影"
+species: 妖精
+age: "24 岁"
+height: 108cm
+power: "锁御系 · 制灵 / 强化系 · 巨力"
+official: 鸠老的徒弟，崇拜无限。
+source: "官方设定集 P015"

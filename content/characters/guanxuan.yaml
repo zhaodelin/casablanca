@@ -1,0 +1,25 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+# species/age/height/power/official 来自官方设定集《罗小黑战记大电影》人物页。
+
+name: 冠萱
+en: GUANXUAN
+role: 会馆管事
+faction: 妖灵会馆（龙游）
+color: "#3f6f8a"
+kw:
+  - 冠萱
+desc: 潘靖的弟子，会馆里的日常事务多半经他的手。白衣配橙金色披领，做事实在，是那种交代下去就不用再问第二遍的人。
+tags:
+  - 潘靖弟子
+  - 会馆管事
+  - 生灵系
+cv: —（官微未公布）
+debut: "2019-09-07 · 大电影"
+species: 妖精
+age: "25 岁"
+height: 171cm
+power: "生灵系 · 念磁 / 心灵系 · 清洗"
+official: 潘靖的弟子，协助管理会馆日常事务，非常可靠。
+source: "官方设定集 P010"

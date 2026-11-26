@@ -58,11 +58,21 @@ tags: [灵质空间, 领域]  # 弹窗里的标签，2–4 个
 cv: 山新 / 花泽香菜     # 不确认就写 —（官微未公布），不要编
 debut: 2011-04-08 · 第一集
 quote: 一句台词或代表文案（可留空）
+# —— 以下字段来自官方设定集《罗小黑战记大电影》的人物页（可整段省略）——
+species: 妖精          # 只有 妖精 / 人类 两种
+age: 6 岁              # 要带「岁」
+height: 174cm         # 没写身高就填 '—'
+power: 空间系 · 领域 / 御灵系 · 金   # 「系 · 招式」，多个用 / 分隔
+official: 设定集上那一句原话
+source: 官方设定集 P004  # 写了 official 就必须写出处
 ```
 
 - 文件名就是 `key`，**新增角色要同时**：建 `<key>.yaml`、放进 `characters/index.yaml` 的
-  `order`、放一张 `assets/avatars/<key>.jpg`。
-- `posts`（提及数）不要手写，由 `data/derived.json` 的 `mentions` 自动填。
+  `order`、放一张 `assets/avatars/<key>.jpg`、在 `data/media.yaml` 里登记头像配方（`archive: chars`
+  对应归档目录下的 `归档图片整理/`）。
+- `posts`（提及数）不要手写，由 `data/derived.json` 的 `mentions` 自动填；新增角色后跑一次
+  `make sync` 才会把它加进 `mentions`。
+- 种族 / 年龄 / 身高 / 能力 / 设定集原文会渲染在人物弹窗的表格里，卡片不变。
 
 ### 关系（`content/relations.yaml`）
 

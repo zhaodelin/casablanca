@@ -354,3 +354,63 @@ avatars:
     generator: monogram
     char: 木
     note: 木头没有单人头像，用深蓝底 + 宋体字占位。
+  - out: assets/avatars/panjing.jpg
+    archive: chars
+    source: luo1人物/潘靖(老年).jpg
+    box:
+      - 0.430
+      - 0.290
+      - 0.175
+      - 0.250
+    adjust:
+      brightness: 2.1
+      contrast: 1.08
+    note: 大电影剧照（夜色里听音乐），面孔偏暗，提亮后裁切。
+  - out: assets/avatars/jiulao.jpg
+    archive: chars
+    source: 角色识别图集/鸠老.jpg
+    box:
+      - 0.190
+      - 0.265
+      - 0.085
+      - 0.125
+    note: 大电影设定稿（鸠老转面图）的正面头像。
+  - out: assets/avatars/ruoshui.jpg
+    archive: chars
+    source: 角色识别图集/若水.jpg
+    box:
+      - 0.235
+      - 0.140
+      - 0.135
+      - 0.115
+    note: 大电影设定稿（若水立绘）的头部。
+  - out: assets/avatars/guanxuan.jpg
+    archive: chars
+    source: 角色识别图集/冠萱.jpg
+    box:
+      - 0.705
+      - 0.315
+      - 0.105
+      - 0.135
+    adjust:
+      brightness: 1.35
+      contrast: 1.05
+    note: 大电影剧照（夜色天台），提亮后裁切。
+  - out: assets/avatars/yuxi.jpg
+    archive: chars
+    source: 角色识别图集/羽夕.jpg
+    box:
+      - 0.130
+      - 0.590
+      - 0.115
+      - 0.115
+    note: 大电影设定稿（羽夕斗笠+面具立面）。
+  - out: assets/avatars/yifeng.jpg
+    archive: chars
+    source: 角色识别图集/逸风.jpg
+    box:
+      - 0.410
+      - 0.130
+      - 0.115
+      - 0.085
+    note: 大电影设定稿（逸风全身立绘）的头部。

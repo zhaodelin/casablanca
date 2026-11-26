@@ -6,6 +6,12 @@ name: 风息
 en: FENGXI
 role: 《战记1》反派 · 木系
 faction: 风息一派
+species: 妖精
+age: "210 岁+"
+height: 175cm
+power: "御灵系 · 木 / 生灵系 · 豪夺"
+official: 离岛组的领导人。
+source: "官方设定集 P008"
 color: '#3f6b3a'
 kw:
   - 风息

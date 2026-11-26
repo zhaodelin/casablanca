@@ -1,4 +1,4 @@
-﻿/* ==========================================================
+/* ==========================================================
    罗小黑战记 · 设定集与年表
    app.js — 渲染全部内容
    ========================================================== */
@@ -147,10 +147,15 @@
           <div class="mc__tags">${(c.tags || []).map((t) => `<span>#${esc(t)}</span>`).join("")}</div>
           <table class="mc__meta">
             <tr><th>阵营</th><td>${esc(c.faction || "—")}</td></tr>
+            ${c.species ? `<tr><th>种族</th><td>${esc(c.species)}</td></tr>` : ""}
+            ${c.age ? `<tr><th>年龄</th><td>${esc(c.age)}</td></tr>` : ""}
+            ${c.height && c.height !== "—" ? `<tr><th>身高</th><td>${esc(c.height)}</td></tr>` : ""}
+            ${c.power ? `<tr><th>能力</th><td>${esc(c.power)}</td></tr>` : ""}
             <tr><th>配音</th><td>${esc(c.cv || "—（官微未公布）")}</td></tr>
             <tr><th>首次登场</th><td>${esc(c.debut || "—")}</td></tr>
             <tr><th>官微提及</th><td>${c.posts ? esc(c.posts) + " 条" : "—"}</td></tr>
           </table>
+          ${c.official ? `<p class="mc__official">设定集原文：${esc(c.official)}${c.source ? `（${esc(c.source)}）` : ""}</p>` : ""}
           ${c.quote ? `<blockquote class="mc__quote">「${esc(c.quote)}」</blockquote>` : ""}
         </div>
       </div>
@@ -170,11 +175,14 @@
     fengxi: [300, 420], luozhu: [196, 350], xuhuai: [214, 470], tianhu: [300, 540],
     bidiu: [420, 600], heixiu: [560, 620], agen: [672, 560], lingyao: [880, 470],
     chinan: [880, 570], dongdong: [770, 650], shanxin: [150, 200], mtjj: [500, 90],
+    panjing: [118, 628], guanxuan: [228, 700], yuxi: [72, 512],
+    jiulao: [604, 168], ruoshui: [700, 392], yifeng: [906, 678],
   };
   const REL_KIND = {
     师徒: "strong", 师姐弟: "strong", 主人: "strong", 创造者: "strong", 同镇伙伴: "strong",
     同伴: "normal", 朋友: "normal", 同学: "normal", 伙伴: "normal", 同僚: "normal",
     主从: "normal", 旧识牵挂: "normal", 长老同僚: "normal", 追查: "normal", "TV 新篇": "normal",
+    弟子: "strong", 暗卫: "strong", 崇拜: "normal", 会馆同僚: "normal",
     对手: "foe", 立场对立: "foe",
   };
   function renderNet() {

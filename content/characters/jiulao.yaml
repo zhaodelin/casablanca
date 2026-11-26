@@ -1,0 +1,25 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+# species/age/height/power/official 来自官方设定集《罗小黑战记大电影》人物页。
+
+name: 鸠老
+en: JIULAO
+role: "老前辈 · 执行者"
+faction: 妖灵会馆
+color: "#7a3b2e"
+kw:
+  - 鸠老
+desc: 辈分极高的老前辈，长着一张青灰色的脸、一撮长须，戴顶小冠，红黑长袍拖到脚面。年纪大到已经不把资历当回事，如今依旧在执行者的名单上。
+tags:
+  - 老前辈
+  - 执行者
+  - 生灵系
+cv: —（官微未公布）
+debut: "2019-09-07 · 大电影"
+species: 妖精
+age: "800 岁+"
+height: 171cm
+power: "生灵系 · 洞察 / 造物系 · 仿生 / 强化系 · 凌刑"
+official: 辈分很高的老前辈，目前也在当执行者。
+source: "官方设定集 P016"

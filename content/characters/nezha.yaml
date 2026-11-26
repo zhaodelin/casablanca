@@ -6,6 +6,12 @@ name: 哪吒
 en: NEZHA
 role: 会馆执行者 · 火系
 faction: 妖灵会馆
+species: 妖精
+age: "3000 岁+"
+height: 123cm
+power: "御灵系 · 火 / 生灵系 · 幻化 / 锁御系 · 灵御"
+official: 这还需要介绍吗？这还需要介绍吗？
+source: "官方设定集 P017"
 color: '#d2452f'
 kw:
   - 哪吒

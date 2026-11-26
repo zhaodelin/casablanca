@@ -1,0 +1,25 @@
+# 角色卡。改完跑 `make build` 重新生成 assets/data.js。
+# key 必须与文件名一致；avatar 指向 assets/avatars/<key>.jpg。
+# posts（官微提及数）由 data/derived.json 自动填，不要手写。
+# species/age/height/power/official 来自官方设定集《罗小黑战记大电影》人物页。
+
+name: 逸风
+en: YIFENG
+role: 治疗者
+faction: 妖灵会馆（龙游）
+color: "#4a8a8a"
+kw:
+  - 逸风
+desc: 白头巾、蓝卫衣、短裤配紧身裤的少年，看着还没长大，却是会馆里数得着的治疗者。手一抬，伤就收得住。
+tags:
+  - 治疗
+  - 生灵系
+  - 回复
+cv: —（官微未公布）
+debut: "2019-09-07 · 大电影"
+species: 妖精
+age: "16 岁"
+height: 134cm
+power: "生灵系 · 回复"
+official: 拥有非常优秀的治疗能力。
+source: "官方设定集 P010"

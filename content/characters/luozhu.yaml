@@ -6,6 +6,12 @@ name: 洛竹
 en: LUOZHU
 role: 风息同伴
 faction: 风息一派
+species: 妖精
+age: "197 岁"
+height: 167cm
+power: "御灵系 · 木"
+official: 心地善良，虽然很想夺回故乡，但他不赞同风息的做法。
+source: "官方设定集 P013"
 color: '#6b8f4f'
 kw:
   - 洛竹
