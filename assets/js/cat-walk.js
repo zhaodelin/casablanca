@@ -4,7 +4,7 @@
 
   var WALK_FRAMES = 8;
   var IDLE_FRAMES = 4;
-  var WALK_MS = 105;
+  var WALK_MS = 90;
   var IDLE_MS = 420;
   var SPEED = 52;          // px / 秒
   var TURN_MS = 260;       // 转身停顿
