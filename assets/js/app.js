@@ -610,6 +610,56 @@
   }
 
   /* ==========================================================
+     POWERS / 六大系
+     ========================================================== */
+  function renderPowers() {
+    const host = $("#powGrid");
+    if (!host || !D.powers) return;
+    const pw = D.powers;
+    const byName = {};
+    (D.characters || []).forEach((c) => (byName[c.name] = c.key));
+
+    host.innerHTML = (pw.series || [])
+      .map((s, i) => {
+        const subs = (s.subs || [])
+          .map((sub) => {
+            const who = (sub.who || [])
+              .map((n) =>
+                byName[n]
+                  ? `<button class="pow__who" type="button" data-char="${byName[n]}">${esc(n)}</button>`
+                  : `<span class="pow__who pow__who--off">${esc(n)}</span>`
+              )
+              .join("");
+            return `<li class="pow__sub">
+                <span class="pow__sn">${esc(sub.name)}</span>
+                <span class="pow__sd">${esc(sub.desc)}</span>
+                ${who ? `<span class="pow__whos">${who}</span>` : ""}
+              </li>`;
+          })
+          .join("");
+        return `<article class="pow__card" style="--i:${i}">
+            <header class="pow__head">
+              <span class="pow__no">${String(i + 1).padStart(2, "0")}</span>
+              <h3 class="pow__name">${esc(s.name)}</h3>
+              <span class="pow__en">${esc(s.en || "")}</span>
+              <span class="pow__role">${esc(s.role || "")}</span>
+            </header>
+            <p class="pow__desc">${esc(s.desc)}</p>
+            <ul class="pow__subs">${subs}</ul>
+            <p class="pow__count">${(s.subs || []).length} 条附属系</p>
+          </article>`;
+      })
+      .join("");
+
+    const note = $("#powNote");
+    if (note) note.textContent = pw.note || "";
+
+    $$(".pow__who[data-char]", host).forEach((b) => {
+      b.addEventListener("click", () => openChar(b.dataset.char));
+    });
+  }
+
+  /* ==========================================================
      INIT
      ========================================================== */
   function init() {
@@ -618,6 +668,7 @@
     renderTimelines();
     renderCharFilter();
     renderChars();
+    renderPowers();
     renderNet();
     renderFilms();
     renderExtras();

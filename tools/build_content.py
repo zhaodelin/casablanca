@@ -139,6 +139,7 @@ def build():
         "timeline": load_yaml(CONTENT / "timeline" / "work.yaml")["events"],
         "story": load_yaml(CONTENT / "timeline" / "story.yaml")["events"],
         "characters": chars,
+        "powers": load_yaml(CONTENT / "powers.yaml"),
         "relations": build_relations(chars),
         "films": {"film1": films[0], "film2": films[1]},
         "designs": [[d["img"], d["title"], d["date"], d["text"], d["link"]]

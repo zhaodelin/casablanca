@@ -182,6 +182,37 @@ def main():
         if t.get("link") and not str(t["link"]).startswith("http"):
             err(f"solar.yaml {t.get('name')} link 不是 http(s)")
 
+    # ---------- 六大系能力体系 ----------
+    powers = load(CONTENT / "powers.yaml") or {}
+    series = powers.get("series", [])
+    want = {"御灵系", "锁御系", "造物系", "生灵系", "心灵系", "空间系"}
+    got = {s.get("name") for s in series}
+    if got != want:
+        err(f"content/powers.yaml 六大系应为 {sorted(want)}，实际 {sorted(got)}")
+    keys = [s.get("key") for s in series]
+    if len(set(keys)) != len(keys):
+        err("powers.yaml 系列 key 有重复")
+    char_names = set()
+    for f in sorted((CONTENT / "characters").glob("*.yaml")):
+        if f.name == "index.yaml":
+            continue
+        ch = load(f) or {}
+        if ch.get("name"):
+            char_names.add(ch["name"])
+    for s in series:
+        subs = s.get("subs") or []
+        if not subs:
+            err(f"powers.yaml {s.get('name')} 没有附属系")
+        for sub in subs:
+            if not sub.get("name"):
+                err(f"powers.yaml {s.get('name')} 有附属系缺 name")
+            if not sub.get("desc"):
+                err(f"powers.yaml {sub.get('name')} 缺 desc")
+            # 代表角色里可能有设定集没收录的人物（如泽宇、白游），只做去重检查
+            who = sub.get("who") or []
+            if len(set(who)) != len(who):
+                err(f"powers.yaml {sub.get('name')} 代表角色有重复")
+
     # ---------- 数据 ----------
     derived = json.loads((DATA / "derived.json").read_text(encoding="utf-8"))
     series = json.loads((DATA / "series.json").read_text(encoding="utf-8"))

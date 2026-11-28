@@ -21,6 +21,7 @@ content/                  ← 你日常改这里
   extras.yaml             番外（动画/MV/漫画）
   comic.yaml              蓝溪镇的四幕结构
   solar.yaml              二十四节气图集（24 条）
+  powers.yaml             六大系能力体系（6 系 + 36 条附属系）
 data/
   derived.json            从微博归档算出的数字（微博数、图片数、提及数）
   series.json             每集 / 每话的标题与日期
@@ -122,6 +123,10 @@ events:
 - `works.yaml`：四张作品卡，`href` 是页内锚点。
 - `solar.yaml`：二十四节气，`no` 必须 1–24 连续、`name` 不重复、`img` 指向已存在的图
   （校验会查）。图从 `@罗小黑CAT` 的节气微博里取最近的发帖，脚本见归档目录的 `build_solar_terms.py`。
+- `powers.yaml`：六大系能力体系。`name` 必须正好是御灵系、锁御系、造物系、生灵系、心灵系、
+  空间系六个（校验会查），每系 `subs[]` 里的 `name`/`desc` 必填，`who[]` 是代表角色——名字能在
+  `characters/` 里对上就渲染成可点按钮（跳到设定卡），对不上（如泽宇、白游）渲染成虚线占位。
+  同一条数据也导出到 `归档数据/能力体系/`（xlsx + md + json），改完记得两边同步。
 
 ## 2. 数字与归档
 
