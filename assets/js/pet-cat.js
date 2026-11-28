@@ -45,7 +45,7 @@
     x: 0, y: 0, tx: 0, ty: 0,
     mode: "idle", wait: 0.8,
     frame: 0, acc: 0,
-    facing: 1
+    facing: -1            /* 素材朝左；-1 朝左、1 朝右（镜像） */
   };
 
   var drag = { active: false, id: null, offX: 0, offY: 0, moved: false, sx: 0, sy: 0 };
@@ -67,6 +67,24 @@
     sprite.style.backgroundPosition = -(i % FRAMES) * FRAME_W * scale + "px 0";
   }
 
+  /* 素材朝左：向右走时整只镜像，让头朝行进方向。
+     dir: -1 朝左（原图），1 朝右（镜像）。留一点滞回，避免在正上/正下方抖动。 */
+  var DIR_EPS = 1.2;
+
+  function face(dir) {
+    if (dir === 0) return;
+    var next = dir > 0 ? 1 : -1;
+    if (next === state.facing) return;
+    state.facing = next;
+    el.classList.toggle("pet--flip", next > 0);
+  }
+
+  function faceToward(dx, dy) {
+    if (Math.abs(dx) < DIR_EPS && Math.abs(dy) < DIR_EPS) return;
+    if (Math.abs(dx) >= Math.abs(dy) * 0.6) face(dx > 0 ? 1 : -1);
+    else if (Math.abs(dx) > 0.4) face(dx > 0 ? 1 : -1);
+  }
+
   function pickTarget() {
     var b = bounds(), guard = 0, x, y;
     do {
@@ -85,6 +103,7 @@
     pickTarget();
     paint();
     frameAt(0);
+    el.classList.toggle("pet--flip", state.facing > 0);
   }
 
   function tick(dt) {
@@ -123,6 +142,7 @@
     state.y += (dy / dist) * step;
     clamp();
     paint();
+    faceToward(dx, dy);
 
     if (state.acc >= MOVE_MS) {
       state.acc = 0;
@@ -151,6 +171,7 @@
   function onMove(e) {
     if (!drag.active || e.pointerId !== drag.id) return;
     e.preventDefault();
+    var prevX = state.x;
     if (!drag.moved) {
       if (Math.abs(e.clientX - drag.sx) <= DRAG_THRESHOLD &&
           Math.abs(e.clientY - drag.sy) <= DRAG_THRESHOLD) return;
@@ -161,6 +182,7 @@
     state.y = e.clientY - drag.offY;
     clamp();
     paint();
+    if (Math.abs(state.x - prevX) > 0.8) face(state.x > prevX ? 1 : -1);
   }
 
   function onUp(e) {
