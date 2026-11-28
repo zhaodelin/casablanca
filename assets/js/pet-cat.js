@@ -1,157 +1,225 @@
-/* 页面宠物：一只在视口里自己溜达的团子小黑猫。
-   素材是 12 帧翻滚循环；移动时同一套帧跑快一点，看起来像滚过页面。
-   约束：fixed + pointer-events:none，不参与布局、不拦点击、始终留一部分在视口内。 */
+/* 页面宠物：一只在视口里自己溜达的小黑猫（12 帧团子，可拖拽）。
+   约束：fixed，不参与布局；只有猫本体接收指针事件，其余区域不拦截点击。 */
 (function () {
   "use strict";
 
   if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   var FRAMES = 12;
-  var FRAME_CSS = 100;     /* 素材单帧的 CSS 尺寸，随断点会变，运行时再测 */
+  var FRAME_W = 100;       /* 与 pet.css 的显示尺寸一致 */
+  var FRAME_H = 100;
   var SPEED = 46;          /* px / s */
-  var IDLE_MS = 100;       /* 原地翻滚的节奏＝素材原速 */
-  var MOVE_MS = 78;        /* 移动时略快一点 */
+  var IDLE_MS = 100;       /* 原地翻滚的换帧节奏 */
+  var MOVE_MS = 78;        /* 走路时换帧稍快 */
   var MARGIN = 14;
+  var DRAG_THRESHOLD = 6;  /* 超过这么多像素才算拖拽，否则算点一下 */
 
   var el = document.createElement("div");
   el.className = "pet";
   el.setAttribute("aria-hidden", "true");
-  el.innerHTML = '<span class="pet__sprite"></span>';
+  el.innerHTML = '<span class="pet__sprite" title="可以拖我"></span>';
   document.body.appendChild(el);
 
   var sprite = el.firstChild;
-
-  var dims = { w: FRAME_CSS, h: FRAME_CSS, frame: FRAME_CSS };
+  var scale = 1;
 
   function measure() {
     var r = sprite.getBoundingClientRect();
-    dims.w = r.width || FRAME_CSS;
-    dims.h = r.height || FRAME_CSS;
-    dims.frame = dims.w;                     /* 单帧在条上的步长＝显示宽 */
+    if (r.width > 0) scale = r.width / FRAME_W;
   }
 
   function bounds() {
     var vv = window.visualViewport;
     var w = vv ? vv.width : window.innerWidth;
     var h = vv ? vv.height : window.innerHeight;
+    var bw = FRAME_W * scale;
+    var bh = FRAME_H * scale;
     return {
-      minX: MARGIN,
-      minY: MARGIN,
-      maxX: Math.max(MARGIN, w - dims.w - MARGIN),
-      maxY: Math.max(MARGIN, h - dims.h - MARGIN)
+      minX: MARGIN, minY: MARGIN,
+      maxX: Math.max(MARGIN, w - bw - MARGIN),
+      maxY: Math.max(MARGIN, h - bh - MARGIN)
     };
   }
 
-  var st = {
+  var state = {
     x: 0, y: 0, tx: 0, ty: 0,
-    mode: "idle", wait: 1.2,
+    mode: "idle", wait: 0.8,
     frame: 0, acc: 0,
-    facing: -1
+    facing: 1
   };
+
+  var drag = { active: false, id: null, offX: 0, offY: 0, moved: false, sx: 0, sy: 0 };
 
   function rand(a, b) { return a + Math.random() * (b - a); }
 
   function clamp() {
     var b = bounds();
-    st.x = Math.min(b.maxX, Math.max(b.minX, st.x));
-    st.y = Math.min(b.maxY, Math.max(b.minY, st.y));
+    state.x = Math.min(b.maxX, Math.max(b.minX, state.x));
+    state.y = Math.min(b.maxY, Math.max(b.minY, state.y));
   }
 
   function paint() {
-    el.style.transform = "translate3d(" + st.x.toFixed(1) + "px," + st.y.toFixed(1) + "px,0)";
+    el.style.transform =
+      "translate3d(" + state.x.toFixed(1) + "px," + state.y.toFixed(1) + "px,0)";
   }
 
-  function setFrame(i) {
-    st.frame = i % FRAMES;
-    sprite.style.backgroundPosition = -(st.frame * dims.frame) + "px 0";
-  }
-
-  function face(dir) {
-    if (dir === st.facing) return;
-    st.facing = dir;
-    el.classList.toggle("pet--flip", dir > 0);   /* 素材朝左，向右走时翻转 */
+  function frameAt(i) {
+    sprite.style.backgroundPosition = -(i % FRAMES) * FRAME_W * scale + "px 0";
   }
 
   function pickTarget() {
-    var b = bounds();
-    var x, y, guard = 0;
+    var b = bounds(), guard = 0, x, y;
     do {
       x = rand(b.minX, b.maxX);
       y = rand(b.minY, b.maxY);
       guard += 1;
-    } while (Math.abs(x - st.x) < 90 && guard < 24);
-    st.tx = x;
-    st.ty = y;
+    } while (guard < 24 && Math.abs(x - state.x) < 130 && Math.abs(y - state.y) < 90);
+    state.tx = x; state.ty = y;
   }
 
-  function start() {
-    measure();
+  function place() {
     var b = bounds();
-    st.x = rand(b.minX, b.maxX);
-    st.y = rand(b.minY, b.maxY);
+    state.x = rand(b.minX, b.maxX);
+    state.y = rand(b.minY, b.maxY);
+    clamp();
     pickTarget();
     paint();
-    setFrame(0);
-    el.classList.add("is-ready");
-    raf = window.requestAnimationFrame(loop);
+    frameAt(0);
   }
 
-  function step(dt) {
-    var interval = st.mode === "walk" ? MOVE_MS : IDLE_MS;
-    st.acc += dt;
-    if (st.acc >= interval) {
-      st.acc = st.acc % interval;
-      setFrame(st.frame + 1);
-    }
+  function tick(dt) {
+    if (drag.active) return;          /* 拖拽时不自动走 */
 
-    if (st.mode === "idle") {
-      st.wait -= dt / 1000;
-      if (st.wait <= 0) {
-        st.mode = "walk";
+    state.acc += dt;
+
+    if (state.mode === "idle") {
+      if (state.acc >= IDLE_MS) {
+        state.acc = 0;
+        state.frame = (state.frame + 1) % FRAMES;
+        frameAt(state.frame);
+      }
+      state.wait -= dt / 1000;
+      if (state.wait <= 0) {
+        state.mode = "walk";
+        state.acc = MOVE_MS;
         pickTarget();
       }
       return;
     }
 
-    var dx = st.tx - st.x;
-    var dy = st.ty - st.y;
+    var dx = state.tx - state.x;
+    var dy = state.ty - state.y;
     var dist = Math.sqrt(dx * dx + dy * dy);
-    var move = (SPEED * dt) / 1000;
 
-    if (dist <= move || dist < 2) {
-      st.x = st.tx; st.y = st.ty;
-      clamp(); paint();
-      st.mode = "idle";
-      st.wait = rand(2.0, 5.0);
+    if (dist < 2) {
+      state.mode = "idle";
+      state.wait = rand(0.9, 2.6);
+      state.acc = 0;
       return;
     }
 
-    st.x += (dx / dist) * move;
-    st.y += (dy / dist) * move;
-    face(dx > 0 ? 1 : -1);
+    var step = Math.min((SPEED * dt) / 1000, dist);
+    state.x += (dx / dist) * step;
+    state.y += (dy / dist) * step;
+    clamp();
+    paint();
+
+    if (state.acc >= MOVE_MS) {
+      state.acc = 0;
+      state.frame = (state.frame + 1) % FRAMES;
+      frameAt(state.frame);
+    }
+  }
+
+  /* ---------- 拖拽 ---------- */
+
+  function onDown(e) {
+    if (e.button !== undefined && e.button !== 0) return;
+    e.preventDefault();
+    drag.active = true;
+    drag.id = e.pointerId;
+    drag.moved = false;
+    drag.offX = e.clientX - state.x;
+    drag.offY = e.clientY - state.y;
+    drag.sx = e.clientX;
+    drag.sy = e.clientY;
+    try { sprite.setPointerCapture(e.pointerId); } catch (err) { /* 合成事件没有捕获 */ }
+    el.classList.add("is-dragging");
+    state.mode = "idle";
+  }
+
+  function onMove(e) {
+    if (!drag.active || e.pointerId !== drag.id) return;
+    e.preventDefault();
+    if (!drag.moved) {
+      if (Math.abs(e.clientX - drag.sx) <= DRAG_THRESHOLD &&
+          Math.abs(e.clientY - drag.sy) <= DRAG_THRESHOLD) return;
+      drag.moved = true;
+      pickTarget();
+    }
+    state.x = e.clientX - drag.offX;
+    state.y = e.clientY - drag.offY;
     clamp();
     paint();
   }
 
-  var raf = 0;
+  function onUp(e) {
+    if (!drag.active) return;
+    drag.active = false;
+    drag.id = null;
+    el.classList.remove("is-dragging");
+    try { sprite.releasePointerCapture(e.pointerId); } catch (err) { /* noop */ }
+
+    if (drag.moved) {
+      state.mode = "idle";
+      state.wait = 0.5;
+      state.acc = 0;
+      pickTarget();
+    } else {
+      /* 只是点了一下：翻个身 */
+      state.mode = "idle";
+      state.wait = 0.4;
+      state.acc = 0;
+      state.frame = 0;
+      frameAt(0);
+    }
+  }
+
+  sprite.addEventListener("pointerdown", onDown);
+  sprite.addEventListener("pointermove", onMove);
+  sprite.addEventListener("pointerup", onUp);
+  sprite.addEventListener("pointercancel", onUp);
+  sprite.addEventListener("dragstart", function (e) { e.preventDefault(); });
+
+  /* ---------- 主循环 ---------- */
+
   var last = 0;
+  var raf = 0;
 
   function loop(ts) {
     if (!last) last = ts;
     var dt = Math.min(64, ts - last);
     last = ts;
-    step(dt);
+    tick(dt);
     raf = window.requestAnimationFrame(loop);
   }
 
+  function start() {
+    measure();
+    place();
+    el.classList.add("is-ready");
+    raf = window.requestAnimationFrame(loop);
+  }
+
+  function stop() {
+    if (raf) window.cancelAnimationFrame(raf);
+    raf = 0;
+    last = 0;
+  }
+
   document.addEventListener("visibilitychange", function () {
-    if (document.hidden) {
-      if (raf) window.cancelAnimationFrame(raf);
-      raf = 0;
-      last = 0;
-    } else if (!raf) {
-      raf = window.requestAnimationFrame(loop);
-    }
+    if (document.hidden) stop();
+    else if (!raf) raf = window.requestAnimationFrame(loop);
   });
 
   var rt = 0;
@@ -161,7 +229,7 @@
       measure();
       clamp();
       paint();
-    }, 120);
+    }, 140);
   });
 
   if (document.readyState === "loading") {
@@ -171,5 +239,11 @@
   }
 
   /* 自动化测试探针 */
-  window.__pet = { state: st, bounds: bounds, step: step, dims: dims };
+  window.__pet = {
+    state: state,
+    drag: drag,
+    bounds: bounds,
+    step: tick,
+    dims: function () { return { w: FRAME_W, h: FRAME_H, frames: FRAMES, scale: scale }; }
+  };
 })();

@@ -12,8 +12,7 @@
   contain: layout paint style;
   will-change: transform;
   transform: translate3d(-999px, -999px, 0);
-  opacity: 0;
-  transition: opacity 0.8s ease;
+  opacity: 1;              /* 不做淡入：无头截图/停掉动画的环境里别让它看不见 */
 }
 
 .pet.is-ready {
@@ -30,6 +29,18 @@
   background-position: 0 0;
   /* 深色区块上给一圈极淡的亮边，不然黑猫会糊进背景 */
   filter: drop-shadow(0 0 1.5px rgba(250, 246, 228, 0.55));
+  /* 只有猫本体接指针：可拖拽，但不会挡住页面其它区域的点击 */
+  pointer-events: auto;
+  cursor: grab;
+  touch-action: none;
+  -webkit-user-drag: none;
+  transition: filter 0.2s ease;
+}
+
+.pet.is-dragging .pet__sprite {
+  cursor: grabbing;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35))
+          drop-shadow(0 0 2px rgba(250, 246, 228, 0.75));
 }
 
 /* 高分屏换 2 倍图，CSS 尺寸仍是 1200×100 */
