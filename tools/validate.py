@@ -213,6 +213,21 @@ def main():
             if len(set(who)) != len(who):
                 err(f"powers.yaml {sub.get('name')} 代表角色有重复")
 
+    # ---------- 人物能力表 ----------
+    ab = (load(CONTENT / "abilities.yaml") or {}).get("characters", [])
+    if not ab:
+        err("content/abilities.yaml 没有 characters")
+    ab_names = [c.get("name") for c in ab]
+    if len(set(ab_names)) != len(ab_names):
+        err("abilities.yaml 角色名有重复")
+    for c in ab:
+        if not c.get("name"):
+            err("abilities.yaml 有角色缺 name")
+        if not c.get("power"):
+            err(f"abilities.yaml {c.get('name')} 缺 power（没有也写「未公开」）")
+        if c.get("power") != "未公开" and not c.get("series"):
+            err(f"abilities.yaml {c.get('name')} 缺 series（主系）")
+
     # ---------- 数据 ----------
     derived = json.loads((DATA / "derived.json").read_text(encoding="utf-8"))
     series = json.loads((DATA / "series.json").read_text(encoding="utf-8"))

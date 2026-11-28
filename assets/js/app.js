@@ -660,6 +660,84 @@
   }
 
   /* ==========================================================
+     ABILITY TABLE / 人物能力表
+     ========================================================== */
+  function renderAbilities() {
+    const body = $("#abBody");
+    if (!body || !D.abilities) return;
+    const rows = D.abilities;
+    const byName = {};
+    (D.characters || []).forEach((c) => (byName[c.name] = c.key));
+
+    const seriesList = [];
+    rows.forEach((r) => {
+      if (r.series && seriesList.indexOf(r.series) < 0) seriesList.push(r.series);
+    });
+    if (rows.some((r) => r.power === "未公开")) seriesList.push("未公开");
+
+    let cur = "全部";
+
+    function paint() {
+      const list =
+        cur === "全部"
+          ? rows
+          : cur === "未公开"
+          ? rows.filter((r) => r.power === "未公开")
+          : rows.filter((r) => r.series === cur);
+      body.innerHTML = list
+        .map((r) => {
+          const key = byName[r.name];
+          const name = key
+            ? `<button class="ab__name" type="button" data-char="${key}">${esc(r.name)}</button>`
+            : `<span class="ab__name ab__name--raw">${esc(r.name)}</span>`;
+          const power =
+            r.power === "未公开"
+              ? `<span class="ab__none">未公开</span>`
+              : r.power
+                  .split(" / ")
+                  .map((p) => `<span class="ab__p">${esc(p)}</span>`)
+                  .join("");
+          return `<tr>
+              <td>${name}</td>
+              <td class="ab__sp">${esc(r.species || "—")}</td>
+              <td>${power}</td>
+              <td class="ab__src">${esc(r.source || "")}</td>
+            </tr>`;
+        })
+        .join("");
+
+      $$(".ab__name[data-char]", body).forEach((b) => {
+        b.addEventListener("click", () => openChar(b.dataset.char));
+      });
+
+      const foot = $("#abFoot");
+      if (foot) {
+        const withPower = rows.filter((r) => r.power !== "未公开").length;
+        foot.textContent = `共 ${rows.length} 位；有明确能力 ${withPower} 位，未公开 ${rows.length - withPower} 位。`;
+      }
+    }
+
+    const filter = $("#abFilter");
+    if (filter) {
+      filter.innerHTML = ["全部"]
+        .concat(seriesList)
+        .map(
+          (s) =>
+            `<button class="chip${s === "全部" ? " is-on" : ""}" type="button" data-ab="${esc(s)}">${esc(s)}</button>`
+        )
+        .join("");
+      $$(".chip", filter).forEach((b) => {
+        b.addEventListener("click", () => {
+          cur = b.dataset.ab;
+          $$(".chip", filter).forEach((x) => x.classList.toggle("is-on", x === b));
+          paint();
+        });
+      });
+    }
+    paint();
+  }
+
+  /* ==========================================================
      INIT
      ========================================================== */
   function init() {
@@ -669,6 +747,7 @@
     renderCharFilter();
     renderChars();
     renderPowers();
+    renderAbilities();
     renderNet();
     renderFilms();
     renderExtras();

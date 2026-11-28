@@ -743,3 +743,120 @@ section[id]{scroll-margin-top:66px}
   .pow__sub { grid-template-columns: 74px minmax(0, 1fr); }
   .pow__name { font-size: 21px; }
 }
+
+/* ---- 人物能力表 ---- */
+.ab {
+  margin-top: 46px;
+  padding-top: 34px;
+  border-top: 1px solid rgba(245, 240, 230, 0.09);
+}
+
+.ab__head { margin-bottom: 18px; }
+
+.ab__title {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--paper);
+  margin: 0 0 8px;
+}
+
+.ab__sub {
+  max-width: 760px;
+  margin: 0;
+  font: 400 12.5px/1.85 var(--sans);
+  color: rgba(245, 240, 230, 0.45);
+}
+
+.ab__filter { margin-bottom: 16px; }
+
+.ab__tablewrap {
+  overflow-x: auto;
+  border: 1px solid rgba(245, 240, 230, 0.09);
+  border-radius: 3px;
+}
+
+.ab__table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font: 400 13px/1.6 var(--sans);
+}
+
+.ab__table th {
+  position: sticky;
+  top: 0;
+  text-align: left;
+  font: 600 11px/1 var(--sans);
+  letter-spacing: 0.14em;
+  color: rgba(245, 240, 230, 0.4);
+  padding: 14px 16px;
+  background: #101926;
+  border-bottom: 1px solid rgba(245, 240, 230, 0.12);
+  white-space: nowrap;
+}
+
+.ab__table td {
+  padding: 13px 16px;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(245, 240, 230, 0.06);
+  color: rgba(245, 240, 230, 0.72);
+}
+
+.ab__table tr:hover td { background: rgba(255, 255, 255, 0.022); }
+
+.ab__table td:first-child { white-space: nowrap; }
+
+.ab__name {
+  font: 600 13.5px/1.6 var(--sans);
+  color: var(--paper);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  border-bottom: 1px dashed rgba(255, 107, 44, 0.55);
+}
+
+.ab__name:hover { color: var(--orange); }
+
+.ab__name--raw {
+  cursor: default;
+  color: rgba(245, 240, 230, 0.7);
+  border-bottom: 0;
+}
+
+.ab__sp {
+  color: rgba(245, 240, 230, 0.42) !important;
+  white-space: nowrap;
+}
+
+.ab__p {
+  display: inline-block;
+  margin: 0 6px 6px 0;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: rgba(47, 111, 106, 0.16);
+  border: 1px solid rgba(47, 111, 106, 0.35);
+  color: #a8c8c2;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.ab__none { color: rgba(245, 240, 230, 0.3); font-size: 12px; }
+
+.ab__src {
+  font-size: 11.5px !important;
+  color: rgba(245, 240, 230, 0.34) !important;
+  min-width: 170px;
+}
+
+.ab__foot {
+  margin: 12px 0 0;
+  font: 400 11.5px/1.6 var(--sans);
+  color: rgba(245, 240, 230, 0.32);
+}
+
+@media (max-width: 820px) {
+  .ab { margin-top: 34px; padding-top: 26px; }
+  .ab__title { font-size: 21px; }
+}

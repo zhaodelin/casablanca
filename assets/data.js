@@ -1465,6 +1465,411 @@ window.LXH = {
    }
   ]
  },
+ "abilities": [
+  {
+   "name": "小黑",
+   "species": "妖精",
+   "power": "空间系·领域 / 空间系·传送 / 御灵系·金",
+   "raw": "空间系-领域 空间系-传送 御灵系-金",
+   "series": "御灵系",
+   "source": "设定集 P004；微博 I6uv55W0D",
+   "confidence": "官方",
+   "on_site": true
+  },
+  {
+   "name": "无限",
+   "species": "人类",
+   "power": "御灵系·金 / 空间系·吞噬",
+   "raw": "御灵系-金 空间系-吞噬",
+   "series": "御灵系",
+   "source": "设定集 P006",
+   "confidence": "官方",
+   "on_site": true
+  },
+  {
+   "name": "风息",
+   "species": "妖精",
+   "power": "御灵系·木 / 生灵系·豪夺",
+   "raw": "御灵系-木 生灵系-豪夺",
+   "series": "御灵系",
+   "source": "设定集 P008；微博 I6u93nzAA",
+   "confidence": "官方",
+   "on_site": true
+  },
+  {
+   "name": "洛竹",
+   "species": "妖精",
+   "power": "御灵系·木",
+   "raw": "御灵系-木系",
+   "series": "御灵系",
+   "source": "设定集 P013；微博 I6spXC1PK",
+   "confidence": "官方",
+   "on_site": true
+  },
+  {
+   "name": "虚淮",
+   "species": "妖精",
+   "power": "御灵系·冰",
+   "raw": "御灵系-冰",
+   "series": "御灵系",
+   "source": "设定集 P012；微博 I6siSfaxV",
+   "confidence": "官方",
+   "on_site": true
+  },
+  {
+   "name": "天虎",
+   "species": "妖精",
+   "power": "御灵系·火",
+   "raw": "御灵系-火",
+   "series": "御灵系",
+   "source": "设定集 P014；微博 I6sU1iHc6",
+   "confidence": "官方",
+   "on_site": true
+  },
+  {
+   "name": "哪吒",
+   "species": "妖精",
+   "power": "御灵系·火 / 生灵系·幻化 / 锁御系·灵御",
+   "raw": "御灵系-火 生灵系-幻化 锁御系-灵御",
+   "series": "御灵系",
+   "source": "设定集 P017；微博 I6sIApFpZ",
+   "confidence": "官方",
+   "on_site": true
+  },
+  {
+   "name": "若水",
+   "species": "妖精",
+   "power": "锁御系·制灵 / 生灵系·强化（巨力）",
+   "raw": "锁御系-制灵 强化系-巨力",
+   "series": "锁御系",
+   "source": "设定集 P015；微博 I6sdsgs4y",
+   "confidence": "官方",
+   "on_site": true
+  },
+  {
+   "name": "鸠老",
+   "species": "妖精",
+   "power": "生灵系·洞察 / 造物系·仿生 / 生灵系·强化（凌荆）",
+   "raw": "生灵系-洞察 造物系-仿生 强化系-凌荆",
+   "series": "造物系",
+   "source": "设定集 P016；微博 I6szc2Nhp",
+   "confidence": "官方",
+   "on_site": true
+  },
+  {
+   "name": "逸风",
+   "species": "妖精",
+   "power": "生灵系·回复（治疗）",
+   "raw": "生灵系-回复",
+   "series": "生灵系",
+   "source": "设定集 P010；微博 I6ts9Ag9S",
+   "confidence": "官方",
+   "on_site": true
+  },
+  {
+   "name": "冠萱",
+   "species": "妖精",
+   "power": "生灵系·念磁 / 心灵系·清洗",
+   "raw": "生灵系-念磁 心灵系-清洗",
+   "series": "生灵系",
+   "source": "设定集 P010；微博 I6ts9Ag9S",
+   "confidence": "官方",
+   "on_site": true
+  },
+  {
+   "name": "羽夕",
+   "species": "妖精",
+   "power": "生灵系·隐匿 / 生灵系·强化（强化）",
+   "raw": "生灵系-隐匿 强化系-强化",
+   "series": "生灵系",
+   "source": "设定集 P010；微博 I6tagBNlf",
+   "confidence": "官方",
+   "on_site": true
+  },
+  {
+   "name": "潘靖",
+   "species": "妖精",
+   "power": "生灵系·培元 / 生灵系·化生 / 心灵系·传音",
+   "raw": "生灵系-培元 生灵系-化生 心灵系-传音",
+   "series": "生灵系",
+   "source": "设定集 P018；微博 I6tagBNlf",
+   "confidence": "官方",
+   "on_site": true
+  },
+  {
+   "name": "天介",
+   "species": "妖精",
+   "power": "御灵系·火 / 生灵系·焚瘴",
+   "raw": "御灵系-火 生灵系-焚瘴",
+   "series": "御灵系",
+   "source": "微博 I6sMNleQ8",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "兆岳",
+   "species": "妖精",
+   "power": "御灵系·土 / 御灵系·火",
+   "raw": "御灵系-土 御灵系-火",
+   "series": "御灵系",
+   "source": "微博 I6sMNleQ8",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "闵翔（闵先生）",
+   "species": "妖精",
+   "power": "生灵系·薄音",
+   "raw": "生灵系-薄音",
+   "series": "生灵系",
+   "source": "微博 I6tgsaRNh",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "毛毛（冠旭）",
+   "species": "妖精",
+   "power": "生灵系（无技能）",
+   "raw": "生灵系小家伙，无技能",
+   "series": "生灵系",
+   "source": "微博 I6tgsaRNh",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "叶子",
+   "species": "妖精",
+   "power": "御灵系·土",
+   "raw": "御灵系-土",
+   "series": "御灵系",
+   "source": "微博 I6t1OsLe3",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "阿赫",
+   "species": "妖精",
+   "power": "心灵系·傀儡",
+   "raw": "心灵系-傀儡",
+   "series": "心灵系",
+   "source": "微博 I6t1OsLe3",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "画虎",
+   "species": "妖精",
+   "power": "生灵系·画灵 / 造物系（双系合技）",
+   "raw": "生灵系*造物系-画灵（双系合技）",
+   "series": "造物系",
+   "source": "微博 I75pkqXXj",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "甲",
+   "species": "妖精",
+   "power": "御灵系·土",
+   "raw": "御灵系-土",
+   "series": "御灵系",
+   "source": "微博 PDn14BCAo",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "乙",
+   "species": "妖精",
+   "power": "御灵系·土 / 生灵系·回复",
+   "raw": "御灵系-土 生灵系-回复",
+   "series": "御灵系",
+   "source": "微博 PDn14BCAo",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "泽宇",
+   "species": "妖精",
+   "power": "御灵系·金 / 生灵系·追毫",
+   "raw": "御灵系-金 生灵系-追毫",
+   "series": "御灵系",
+   "source": "微博 PCIF6styR",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "紫实",
+   "species": "妖精",
+   "power": "生灵系·观灵 / 御灵系·土",
+   "raw": "生灵系-观灵 御灵系-土",
+   "series": "御灵系",
+   "source": "微博 PDGaXDoFk",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "白游",
+   "species": "妖精",
+   "power": "生灵系·烛微",
+   "raw": "生灵系-烛微",
+   "series": "生灵系",
+   "source": "微博 RsnhBiPQw",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "肄目",
+   "species": "妖精",
+   "power": "心灵系·摄心（另有御灵系、生灵系）",
+   "raw": "御灵系，生灵系，心灵系 …… 心灵系-摄心",
+   "series": "御灵系",
+   "source": "微博 PETJbCcpS",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "西木子",
+   "species": "妖精",
+   "power": "心灵系·戏梦（锁御系未知）",
+   "raw": "锁御系能力未知，心灵系-戏梦",
+   "series": "锁御系",
+   "source": "微博 PCKIv2a0f",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "鹤天",
+   "species": "妖精",
+   "power": "锁御系·阵法",
+   "raw": "锁御系阵法大师",
+   "series": "锁御系",
+   "source": "微博 PFUOs7Hyy",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "大松",
+   "species": "妖精",
+   "power": "锁御系·法器（流石甲）",
+   "raw": "锁御系大师，流石甲是大松独创的法器",
+   "series": "锁御系",
+   "source": "微博 Q0a09bTdS",
+   "confidence": "官微设定",
+   "on_site": false
+  },
+  {
+   "name": "青峰",
+   "species": "妖精",
+   "power": "生灵系·回复（治疗）",
+   "raw": "生灵系能力卓越……两位治疗",
+   "series": "生灵系",
+   "source": "微博 PFsmk2vbl",
+   "confidence": "官微设定",
+   "on_site": false
+  },
+  {
+   "name": "晓月",
+   "species": "妖精",
+   "power": "生灵系·回复（治疗）",
+   "raw": "同上",
+   "series": "生灵系",
+   "source": "微博 PFsmk2vbl",
+   "confidence": "官微设定",
+   "on_site": false
+  },
+  {
+   "name": "鹿野",
+   "species": "妖精",
+   "power": "生灵系·追毫 / 御灵系·金",
+   "raw": "生灵系技能「追毫」；因为御金能力",
+   "series": "御灵系",
+   "source": "微博 PCGYfeHc8、PCLeAxGEJ",
+   "confidence": "官微设定",
+   "on_site": true
+  },
+  {
+   "name": "花轮",
+   "species": "妖精",
+   "power": "空间系·蕴藏",
+   "raw": "空间系-蕴藏 负责后勤",
+   "series": "空间系",
+   "source": "微博 I6ts9Ag9S",
+   "confidence": "官微设计稿",
+   "on_site": false
+  },
+  {
+   "name": "爽叔",
+   "species": "人类",
+   "power": "空间系·转移",
+   "raw": "空间系「转移」",
+   "series": "空间系",
+   "source": "微博 I6pLOCFAJ",
+   "confidence": "官微设定",
+   "on_site": false
+  },
+  {
+   "name": "灵遥",
+   "species": "妖精",
+   "power": "未公开",
+   "raw": "—",
+   "source": "战记2 设计稿未标注能力",
+   "confidence": "未知",
+   "on_site": true
+  },
+  {
+   "name": "池年",
+   "species": "妖精",
+   "power": "未公开",
+   "raw": "—",
+   "source": "战记2 设计稿未标注能力",
+   "confidence": "未知",
+   "on_site": true
+  },
+  {
+   "name": "老君",
+   "species": "妖精",
+   "power": "未公开",
+   "raw": "—",
+   "source": "设定集未收录",
+   "confidence": "未知",
+   "on_site": true
+  },
+  {
+   "name": "清凝",
+   "species": "人类",
+   "power": "未公开",
+   "raw": "—",
+   "source": "设定集未收录",
+   "confidence": "未知",
+   "on_site": true
+  },
+  {
+   "name": "谛听",
+   "species": "妖精",
+   "power": "未公开",
+   "raw": "—",
+   "source": "设定集未收录",
+   "confidence": "未知",
+   "on_site": true
+  },
+  {
+   "name": "阿根",
+   "species": "人类",
+   "power": "未公开",
+   "raw": "—",
+   "source": "—",
+   "confidence": "未知",
+   "on_site": true
+  },
+  {
+   "name": "小白",
+   "species": "人类",
+   "power": "未公开",
+   "raw": "—",
+   "source": "—",
+   "confidence": "未知",
+   "on_site": true
+  }
+ ],
  "relations": [
   [
    "xiaohei",
