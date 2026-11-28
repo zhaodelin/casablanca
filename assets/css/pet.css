@@ -1,4 +1,4 @@
-/* 页面宠物：团子小黑猫
+/* 页面宠物：团子小黑
    fixed 定位 + pointer-events:none，不参与布局、不挡点击。
    雪碧条：12 帧 × 100×100（pet-cat-v2.png / pet-cat-v2@2x.png，白底已按 238 阈值硬键扣除，alpha 只有 0/255）。 */
 
