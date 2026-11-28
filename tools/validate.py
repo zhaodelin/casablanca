@@ -162,6 +162,26 @@ def main():
     if len(arcs) != 4:
         err(f"content/comic.yaml 应 4 幕，实际 {len(arcs)}")
 
+    # ---------- 二十四节气 ----------
+    solar = load(CONTENT / "solar.yaml") or {}
+    terms = solar.get("terms", [])
+    if len(terms) != 24:
+        err(f"content/solar.yaml 应 24 个节气，实际 {len(terms)}")
+    names = [t.get("name") for t in terms]
+    if len(set(names)) != len(names):
+        err("solar.yaml 节气名有重复")
+    for i, t in enumerate(terms, 1):
+        if t.get("no") != i:
+            err(f"solar.yaml 第 {i} 项 no 应为 {i}，实际 {t.get('no')}")
+        if not t.get("img"):
+            err(f"solar.yaml {t.get('name')} 缺 img")
+        else:
+            asset_ok(t["img"], "solar")
+        if not t.get("date"):
+            err(f"solar.yaml {t.get('name')} 缺 date")
+        if t.get("link") and not str(t["link"]).startswith("http"):
+            err(f"solar.yaml {t.get('name')} link 不是 http(s)")
+
     # ---------- 数据 ----------
     derived = json.loads((DATA / "derived.json").read_text(encoding="utf-8"))
     series = json.loads((DATA / "series.json").read_text(encoding="utf-8"))

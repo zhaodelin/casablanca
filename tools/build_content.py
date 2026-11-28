@@ -145,6 +145,7 @@ def build():
                     for d in load_yaml(CONTENT / "designs.yaml")["designs"]],
         "extras": load_yaml(CONTENT / "extras.yaml")["extras"],
         "comic": comic,
+        "solar": load_yaml(CONTENT / "solar.yaml")["terms"],
         "episodes": series["episodes"],
     }
 

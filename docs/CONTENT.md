@@ -20,6 +20,7 @@ content/                  ← 你日常改这里
   designs.yaml            设定稿卡片
   extras.yaml             番外（动画/MV/漫画）
   comic.yaml              蓝溪镇的四幕结构
+  solar.yaml              二十四节气图集（24 条）
 data/
   derived.json            从微博归档算出的数字（微博数、图片数、提及数）
   series.json             每集 / 每话的标题与日期
@@ -119,6 +120,8 @@ events:
 - `comic.yaml`：`arcs` 是四幕 `[标题, 起始话, 结束话, 说明]`，最后一幕的结束话必须等于
   `data/series.json` 的最后一话（校验会查）。
 - `works.yaml`：四张作品卡，`href` 是页内锚点。
+- `solar.yaml`：二十四节气，`no` 必须 1–24 连续、`name` 不重复、`img` 指向已存在的图
+  （校验会查）。图从 `@罗小黑CAT` 的节气微博里取最近的发帖，脚本见归档目录的 `build_solar_terms.py`。
 
 ## 2. 数字与归档
 

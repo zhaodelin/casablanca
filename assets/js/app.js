@@ -496,6 +496,44 @@
   }
 
   /* ==========================================================
+     SOLAR TERMS
+     ========================================================== */
+  function renderSolar() {
+    const g = $("#solarGrid");
+    if (!g) return;
+    g.innerHTML = (D.solar || [])
+      .map(
+        (s, i) => `<button class="sol reveal" style="--i:${i}" data-zoom="${s.img}"
+          data-title="${esc(s.name)}" data-date="${esc(s.date)}" data-note="${esc(s.note)}" data-link="${esc(s.link || "")}">
+          <span class="sol__img"><img src="${s.img}" alt="${esc(s.name)}" loading="lazy"></span>
+          <span class="sol__body">
+            <span class="sol__no">${String(s.no).padStart(2, "0")}</span>
+            <span class="sol__name">${esc(s.name)}</span>
+            <span class="sol__note">${esc(s.note)}</span>
+            <span class="sol__date">${esc(s.date)}</span>
+          </span>
+        </button>`
+      )
+      .join("");
+
+    $$(".sol", g).forEach((b) => {
+      const img = b.querySelector("img");
+      b.addEventListener("click", () => {
+        openModal(
+          `<div class="mc__main" style="padding:30px">
+            <p class="mc__role">二十四节气 · ${esc(b.dataset.date)}</p>
+            <h3 class="mc__name" style="font-size:30px">${esc(b.dataset.title)}</h3>
+            <p class="mc__desc">${esc(b.dataset.note)}</p>
+            <img src="${esc(b.dataset.zoom)}" alt="${esc(b.dataset.title)}" style="width:100%;margin-top:18px;border-radius:6px" data-zoom="${esc(b.dataset.zoom)}">
+            ${b.dataset.link ? `<p style="margin-top:16px"><a class="btn btn--solid" style="padding:10px 18px" href="${esc(b.dataset.link)}" target="_blank" rel="noopener">在微博看原图 →</a></p>` : ""}
+          </div>`
+        );
+      });
+      if (img) img.addEventListener("error", () => b.classList.add("is-broken"));
+    });
+  }
+
+  /* ==========================================================
      MODAL / LIGHTBOX
      ========================================================== */
   const modal = $("#modal");
@@ -584,6 +622,7 @@
     renderFilms();
     renderExtras();
     renderComic();
+    renderSolar();
     initNav();
 
     // 时间线切换
