@@ -23,6 +23,8 @@
 
   var sprite = el.firstChild;
   var bubble = el.lastChild;
+  bubble.innerHTML = '<span class="pet__bubble__txt"></span><i class="pet__caret"></i>';
+  var bubbleTxt = bubble.firstChild;
   var scale = 1;
 
   /* 停顿时随机冒一句心里话 */
@@ -130,9 +132,48 @@
     return LINES[i];
   }
 
+  /* 打字机：一个字一个字冒出来，标点处稍作停顿 */
+  var typer = { timer: 0, text: "", i: 0, done: true };
+
+  function stopTyping() {
+    if (typer.timer) window.clearTimeout(typer.timer);
+    typer.timer = 0;
+    typer.done = true;
+  }
+
+  function typeNext() {
+    if (typer.i >= typer.text.length) {
+      typer.done = true;
+      bubble.classList.add("is-done");
+      return;
+    }
+    typer.i += 1;
+    bubbleTxt.textContent = typer.text.slice(0, typer.i);
+    var ch = typer.text.charAt(typer.i - 1);
+    var pause = "，。？！；、".indexOf(ch) >= 0 ? 120 : 0;
+    typer.timer = window.setTimeout(typeNext, 52 + pause);
+  }
+
+  function startTyping(text) {
+    stopTyping();
+    typer.text = text;
+    typer.i = 0;
+    typer.done = false;
+    bubble.classList.remove("is-done");
+    bubbleTxt.textContent = "";
+    typeNext();
+  }
+
   function showBubble() {
     var text = nextLine();
-    bubble.textContent = text;
+
+    /* 先按整句量好宽度，避免逐字生长时气泡抖动 */
+    bubble.style.width = "auto";
+    bubbleTxt.textContent = text;
+    var full = bubble.getBoundingClientRect().width;
+    bubble.style.width = Math.ceil(full) + "px";
+    bubbleTxt.textContent = "";
+    bubble.classList.remove("is-done");
 
     /* 贴近上沿就翻到猫下方 */
     var below = state.y < 104;
@@ -150,11 +191,16 @@
 
     bubble.classList.add("is-on");
     state.bubbleOn = true;
-    state.bubbleLeft = 2.2;
+    state.bubbleLeft = 3.4;
+    startTyping(text);
     if (state.wait < 1.4) state.wait = 1.4;   /* 别刚冒出来就走 */
   }
 
   function hideBubble() {
+    stopTyping();
+    bubbleTxt.textContent = "";
+    bubble.classList.remove("is-done");
+    bubble.style.width = "";
     if (!state.bubbleOn) return;
     bubble.classList.remove("is-on");
     state.bubbleOn = false;
@@ -191,6 +237,7 @@
         }
       } else {
         state.bubbleLeft -= sec;
+        if (typer.done) state.bubbleLeft -= sec * 1.4;   /* 打完字后收起快一点 */
         if (state.bubbleLeft <= 0) hideBubble();
       }
 
