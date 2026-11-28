@@ -9,7 +9,7 @@
   z-index: 40;
   pointer-events: none;
   user-select: none;
-  contain: layout paint style;
+  contain: layout style;   /* 不能带 paint：思考框要溢出到猫头顶之外 */
   will-change: transform;
   transform: translate3d(-999px, -999px, 0);
   opacity: 1;              /* 不做淡入：无头截图/停掉动画的环境里别让它看不见 */
@@ -52,6 +52,74 @@
 
 .pet--flip .pet__sprite {
   transform: scaleX(-1);
+}
+
+/* ---------- 停顿时的思考框 ---------- */
+
+.pet__bubble {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 14px);
+  transform: translateX(calc(-50% + var(--nudge, 0px)));
+  width: max-content;
+  max-width: 210px;
+  padding: 9px 12px;
+  border-radius: 13px;
+  border: 1px solid rgba(32, 24, 18, 0.16);
+  background: #fffaf0;
+  color: #23241f;
+  font: 500 12.5px/1.55 "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  letter-spacing: 0.2px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.pet__bubble.is-on {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 思考框的两个小气泡尾巴，指向猫头 */
+.pet__bubble::before,
+.pet__bubble::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: inherit;
+  border: 1px solid rgba(32, 24, 18, 0.16);
+}
+
+.pet__bubble::before {
+  left: 22px;
+  bottom: -9px;
+  width: 9px;
+  height: 9px;
+}
+
+.pet__bubble::after {
+  left: 15px;
+  bottom: -18px;
+  width: 6px;
+  height: 6px;
+}
+
+/* 贴近屏幕上沿时，气泡改到猫下面 */
+.pet--bubble-below .pet__bubble {
+  bottom: auto;
+  top: calc(100% + 12px);
+}
+
+.pet--bubble-below .pet__bubble::before {
+  bottom: auto;
+  top: -9px;
+}
+
+.pet--bubble-below .pet__bubble::after {
+  bottom: auto;
+  top: -18px;
 }
 
 @media (max-width: 820px) {

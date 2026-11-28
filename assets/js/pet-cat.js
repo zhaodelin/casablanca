@@ -17,11 +17,23 @@
   var el = document.createElement("div");
   el.className = "pet";
   el.setAttribute("aria-hidden", "true");
-  el.innerHTML = '<span class="pet__sprite" title="可以拖我"></span>';
+  el.innerHTML = '<span class="pet__sprite" title="可以拖我"></span>' +
+                 '<span class="pet__bubble"></span>';
   document.body.appendChild(el);
 
   var sprite = el.firstChild;
+  var bubble = el.lastChild;
   var scale = 1;
+
+  /* 停顿时随机冒一句心里话 */
+  var LINES = [
+    "我叫小黑",
+    "人类唯一厉害的就是做饭",
+    "师父做什么就吃什么",
+    "师父，我可以和你一起走吗？",
+    "师姐你好，我是师傅的锁门弟子"
+  ];
+  var lastLine = -1;
 
   function measure() {
     var r = sprite.getBoundingClientRect();
@@ -45,7 +57,10 @@
     x: 0, y: 0, tx: 0, ty: 0,
     mode: "idle", wait: 0.8,
     frame: 0, acc: 0,
-    facing: -1            /* 素材朝左；-1 朝左、1 朝右（镜像） */
+    facing: -1,           /* 素材朝左；-1 朝左、1 朝右（镜像） */
+    bubbleIn: 0,          /* 还有多久冒泡（秒） */
+    bubbleLeft: 0,        /* 气泡还能待多久（秒） */
+    bubbleOn: false
   };
 
   var drag = { active: false, id: null, offX: 0, offY: 0, moved: false, sx: 0, sy: 0 };
@@ -106,6 +121,55 @@
     el.classList.toggle("pet--flip", state.facing > 0);
   }
 
+  /* ---------- 思考框 ---------- */
+
+  function nextLine() {
+    var i = Math.floor(Math.random() * LINES.length);
+    if (LINES.length > 1 && i === lastLine) i = (i + 1 + Math.floor(Math.random() * (LINES.length - 1))) % LINES.length;
+    lastLine = i;
+    return LINES[i];
+  }
+
+  function showBubble() {
+    var text = nextLine();
+    bubble.textContent = text;
+
+    /* 贴近上沿就翻到猫下方 */
+    var below = state.y < 104;
+    el.classList.toggle("pet--bubble-below", below);
+
+    /* 左右越界时把气泡拽回来 */
+    bubble.style.setProperty("--nudge", "0px");
+    var r = bubble.getBoundingClientRect();
+    var vw = window.visualViewport ? window.visualViewport.width : window.innerWidth;
+    var pad = 10;
+    var shift = 0;
+    if (r.left < pad) shift = pad - r.left;
+    else if (r.right > vw - pad) shift = (vw - pad) - r.right;
+    bubble.style.setProperty("--nudge", shift.toFixed(1) + "px");
+
+    bubble.classList.add("is-on");
+    state.bubbleOn = true;
+    state.bubbleLeft = 2.2;
+    if (state.wait < 1.4) state.wait = 1.4;   /* 别刚冒出来就走 */
+  }
+
+  function hideBubble() {
+    if (!state.bubbleOn) return;
+    bubble.classList.remove("is-on");
+    state.bubbleOn = false;
+    state.bubbleLeft = 0;
+  }
+
+  function armBubble() {
+    hideBubble();
+    if (Math.random() < 0.72) {
+      state.bubbleIn = 0.3 + Math.random() * 0.25;
+    } else {
+      state.bubbleIn = -1;                    /* 这轮不说话 */
+    }
+  }
+
   function tick(dt) {
     if (drag.active) return;          /* 拖拽时不自动走 */
 
@@ -117,10 +181,24 @@
         state.frame = (state.frame + 1) % FRAMES;
         frameAt(state.frame);
       }
-      state.wait -= dt / 1000;
+
+      var sec = dt / 1000;
+
+      if (!state.bubbleOn) {
+        if (state.bubbleIn > 0) {
+          state.bubbleIn -= sec;
+          if (state.bubbleIn <= 0) showBubble();
+        }
+      } else {
+        state.bubbleLeft -= sec;
+        if (state.bubbleLeft <= 0) hideBubble();
+      }
+
+      state.wait -= sec;
       if (state.wait <= 0) {
         state.mode = "walk";
         state.acc = MOVE_MS;
+        hideBubble();
         pickTarget();
       }
       return;
@@ -130,10 +208,13 @@
     var dy = state.ty - state.y;
     var dist = Math.sqrt(dx * dx + dy * dy);
 
+    if (state.bubbleOn) hideBubble();
+
     if (dist < 2) {
       state.mode = "idle";
       state.wait = rand(0.9, 2.6);
       state.acc = 0;
+      armBubble();
       return;
     }
 
@@ -166,6 +247,7 @@
     try { sprite.setPointerCapture(e.pointerId); } catch (err) { /* 合成事件没有捕获 */ }
     el.classList.add("is-dragging");
     state.mode = "idle";
+    hideBubble();
   }
 
   function onMove(e) {
@@ -197,13 +279,15 @@
       state.wait = 0.5;
       state.acc = 0;
       pickTarget();
+      armBubble();
     } else {
       /* 只是点了一下：翻个身 */
       state.mode = "idle";
-      state.wait = 0.4;
+      state.wait = 0.9;
       state.acc = 0;
       state.frame = 0;
       frameAt(0);
+      armBubble();
     }
   }
 
@@ -230,6 +314,7 @@
     measure();
     place();
     el.classList.add("is-ready");
+    armBubble();
     raf = window.requestAnimationFrame(loop);
   }
 
@@ -266,6 +351,8 @@
     drag: drag,
     bounds: bounds,
     step: tick,
+    paint: paint,
+    bubble: function () { return bubble; },
     dims: function () { return { w: FRAME_W, h: FRAME_H, frames: FRAMES, scale: scale }; }
   };
 })();
